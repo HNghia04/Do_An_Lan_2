@@ -1,0 +1,849 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="QuanLy_NhanVienModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Bang_cap">
+          <Key>
+            <PropertyRef Name="Ma_bang_cap" />
+          </Key>
+          <Property Name="Ma_bang_cap" Type="int" Nullable="false" />
+          <Property Name="Ten_bang_cap" Type="nvarchar" MaxLength="50" />
+          <Property Name="Ten_co_so_giao_duc" Type="nvarchar" MaxLength="50" />
+          <Property Name="Ngay_cap_bang" Type="datetime" />
+          <Property Name="Hang_bang" Type="nvarchar" MaxLength="50" />
+          <Property Name="Chuyen_nganh_dao_tao" Type="nvarchar" MaxLength="50" />
+          <Property Name="Ma_nhan_vien" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Bang_luong">
+          <Key>
+            <PropertyRef Name="Ma_bang_luong" />
+          </Key>
+          <Property Name="Ma_bang_luong" Type="int" Nullable="false" />
+          <Property Name="Thang_tinh_luong" Type="datetime" />
+          <Property Name="Luong_co_ban" Type="float" />
+          <Property Name="So_gio_lam_them" Type="float" />
+          <Property Name="Phu_cap" Type="float" />
+          <Property Name="Luong_thuc_nhan" Type="float" />
+          <Property Name="Ma_nhan_vien" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Cham_cong">
+          <Key>
+            <PropertyRef Name="Ma_cham_cong" />
+          </Key>
+          <Property Name="Ma_cham_cong" Type="int" Nullable="false" />
+          <Property Name="Ngay_lam_viec" Type="datetime" />
+          <Property Name="So_gio_lam_viec_trong_ngay" Type="float" />
+          <Property Name="Ma_nhan_vien" Type="int" Nullable="false" />
+          <Property Name="Ma_ban_cham_cong" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Chuc_vu">
+          <Key>
+            <PropertyRef Name="Ma_chuc_vu" />
+          </Key>
+          <Property Name="Ma_chuc_vu" Type="int" Nullable="false" />
+          <Property Name="Ten_chuc_vu" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Don_xin_thoi_viec">
+          <Key>
+            <PropertyRef Name="Ma_don_xin_thoi_viec" />
+          </Key>
+          <Property Name="Ma_don_xin_thoi_viec" Type="int" Nullable="false" />
+          <Property Name="Ho_ten" Type="nvarchar" MaxLength="50" />
+          <Property Name="Chuc_vu" Type="nvarchar" MaxLength="50" />
+          <Property Name="Ngay_nop_don" Type="datetime" />
+          <Property Name="Ngay_du_kien_thoi_viec" Type="datetime" />
+          <Property Name="Ly_do" Type="nvarchar" MaxLength="100" />
+          <Property Name="Trang_thai" Type="nvarchar" MaxLength="50" />
+          <Property Name="Ma_nhan_vien" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Hop_dong">
+          <Key>
+            <PropertyRef Name="Ma_hop_dong" />
+          </Key>
+          <Property Name="Ma_hop_dong" Type="int" Nullable="false" />
+          <Property Name="Ngay_bat_dau" Type="datetime" />
+          <Property Name="Ngay_ket_thuc" Type="datetime" />
+          <Property Name="Muc_luong_co_ban" Type="float" />
+          <Property Name="Ma_nhan_vien" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Nghi_phep">
+          <Key>
+            <PropertyRef Name="Ma_nghi_phep" />
+          </Key>
+          <Property Name="Ma_nghi_phep" Type="int" Nullable="false" />
+          <Property Name="Ngay_bat_dau_nghi" Type="datetime" />
+          <Property Name="Ngay_ket_thuc_nghi" Type="datetime" />
+          <Property Name="Trang_thai" Type="nvarchar" MaxLength="50" />
+          <Property Name="Ma_nhan_vien" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Nhan_vien">
+          <Key>
+            <PropertyRef Name="Ma_nhan_vien" />
+          </Key>
+          <Property Name="Ma_nhan_vien" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Ho_va_ten" Type="nvarchar" MaxLength="50" />
+          <Property Name="Gioi_tinh" Type="nvarchar" MaxLength="3" />
+          <Property Name="So_dien_thoai" Type="char" MaxLength="11" />
+          <Property Name="Ten_chuc_vu" Type="nvarchar" MaxLength="50" />
+          <Property Name="Ngay_bat_dau_lam_viec" Type="datetime" />
+          <Property Name="Ma_phong_ban" Type="int" Nullable="false" />
+          <Property Name="Ma_chuc_vu" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Phong_ban">
+          <Key>
+            <PropertyRef Name="Ma_phong_ban" />
+          </Key>
+          <Property Name="Ma_phong_ban" Type="int" Nullable="false" />
+          <Property Name="Ten_phong_ban" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Phu_cap">
+          <Key>
+            <PropertyRef Name="Ma_phu_cap" />
+          </Key>
+          <Property Name="Ma_phu_cap" Type="int" Nullable="false" />
+          <Property Name="Loai_phu_cap" Type="nvarchar" MaxLength="50" />
+          <Property Name="So_tien_phu_cap" Type="float" />
+          <Property Name="Ma_nhan_vien" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Quyen_han">
+          <Key>
+            <PropertyRef Name="Ma_quyen_han" />
+          </Key>
+          <Property Name="Ma_quyen_han" Type="int" Nullable="false" />
+          <Property Name="Ten_quyen_han" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="Tai_khoan">
+          <Key>
+            <PropertyRef Name="Ma_tai_khoan" />
+          </Key>
+          <Property Name="Ma_tai_khoan" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Ten_tai_khoan" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Mat_khau" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Ma_quyen_han" Type="int" Nullable="false" />
+          <Property Name="Ma_nhan_vien" Type="int" />
+        </EntityType>
+        <Association Name="FK__Bang_cap__Ma_nha__2A4B4B5E">
+          <End Role="Nhan_vien" Type="Self.Nhan_vien" Multiplicity="1" />
+          <End Role="Bang_cap" Type="Self.Bang_cap" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Nhan_vien">
+              <PropertyRef Name="Ma_nhan_vien" />
+            </Principal>
+            <Dependent Role="Bang_cap">
+              <PropertyRef Name="Ma_nhan_vien" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Bang_luon__Ma_nh__286302EC">
+          <End Role="Nhan_vien" Type="Self.Nhan_vien" Multiplicity="1" />
+          <End Role="Bang_luong" Type="Self.Bang_luong" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Nhan_vien">
+              <PropertyRef Name="Ma_nhan_vien" />
+            </Principal>
+            <Dependent Role="Bang_luong">
+              <PropertyRef Name="Ma_nhan_vien" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Cham_cong__Ma_nh__25869641">
+          <End Role="Nhan_vien" Type="Self.Nhan_vien" Multiplicity="1" />
+          <End Role="Cham_cong" Type="Self.Cham_cong" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Nhan_vien">
+              <PropertyRef Name="Ma_nhan_vien" />
+            </Principal>
+            <Dependent Role="Cham_cong">
+              <PropertyRef Name="Ma_nhan_vien" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Don_xin_t__Ma_nh__2B3F6F97">
+          <End Role="Nhan_vien" Type="Self.Nhan_vien" Multiplicity="1" />
+          <End Role="Don_xin_thoi_viec" Type="Self.Don_xin_thoi_viec" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Nhan_vien">
+              <PropertyRef Name="Ma_nhan_vien" />
+            </Principal>
+            <Dependent Role="Don_xin_thoi_viec">
+              <PropertyRef Name="Ma_nhan_vien" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Hop_dong__Ma_nha__267ABA7A">
+          <End Role="Nhan_vien" Type="Self.Nhan_vien" Multiplicity="1" />
+          <End Role="Hop_dong" Type="Self.Hop_dong" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Nhan_vien">
+              <PropertyRef Name="Ma_nhan_vien" />
+            </Principal>
+            <Dependent Role="Hop_dong">
+              <PropertyRef Name="Ma_nhan_vien" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Nghi_phep__Ma_nh__276EDEB3">
+          <End Role="Nhan_vien" Type="Self.Nhan_vien" Multiplicity="1" />
+          <End Role="Nghi_phep" Type="Self.Nghi_phep" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Nhan_vien">
+              <PropertyRef Name="Ma_nhan_vien" />
+            </Principal>
+            <Dependent Role="Nghi_phep">
+              <PropertyRef Name="Ma_nhan_vien" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Nhan_vien__Ma_ch__2D27B809">
+          <End Role="Chuc_vu" Type="Self.Chuc_vu" Multiplicity="1" />
+          <End Role="Nhan_vien" Type="Self.Nhan_vien" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Chuc_vu">
+              <PropertyRef Name="Ma_chuc_vu" />
+            </Principal>
+            <Dependent Role="Nhan_vien">
+              <PropertyRef Name="Ma_chuc_vu" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Nhan_vien__Ma_ph__2C3393D0">
+          <End Role="Phong_ban" Type="Self.Phong_ban" Multiplicity="1" />
+          <End Role="Nhan_vien" Type="Self.Nhan_vien" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Phong_ban">
+              <PropertyRef Name="Ma_phong_ban" />
+            </Principal>
+            <Dependent Role="Nhan_vien">
+              <PropertyRef Name="Ma_phong_ban" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Phu_cap__Ma_nhan__29572725">
+          <End Role="Nhan_vien" Type="Self.Nhan_vien" Multiplicity="1" />
+          <End Role="Phu_cap" Type="Self.Phu_cap" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Nhan_vien">
+              <PropertyRef Name="Ma_nhan_vien" />
+            </Principal>
+            <Dependent Role="Phu_cap">
+              <PropertyRef Name="Ma_nhan_vien" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Tai_khoan__Ma_nh__2F10007B">
+          <End Role="Nhan_vien" Type="Self.Nhan_vien" Multiplicity="0..1" />
+          <End Role="Tai_khoan" Type="Self.Tai_khoan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Nhan_vien">
+              <PropertyRef Name="Ma_nhan_vien" />
+            </Principal>
+            <Dependent Role="Tai_khoan">
+              <PropertyRef Name="Ma_nhan_vien" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Tai_khoan__Ma_qu__2E1BDC42">
+          <End Role="Quyen_han" Type="Self.Quyen_han" Multiplicity="1" />
+          <End Role="Tai_khoan" Type="Self.Tai_khoan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Quyen_han">
+              <PropertyRef Name="Ma_quyen_han" />
+            </Principal>
+            <Dependent Role="Tai_khoan">
+              <PropertyRef Name="Ma_quyen_han" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="QuanLy_NhanVienModelStoreContainer">
+          <EntitySet Name="Bang_cap" EntityType="Self.Bang_cap" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Bang_luong" EntityType="Self.Bang_luong" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Cham_cong" EntityType="Self.Cham_cong" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Chuc_vu" EntityType="Self.Chuc_vu" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Don_xin_thoi_viec" EntityType="Self.Don_xin_thoi_viec" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Hop_dong" EntityType="Self.Hop_dong" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Nghi_phep" EntityType="Self.Nghi_phep" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Nhan_vien" EntityType="Self.Nhan_vien" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Phong_ban" EntityType="Self.Phong_ban" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Phu_cap" EntityType="Self.Phu_cap" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Quyen_han" EntityType="Self.Quyen_han" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tai_khoan" EntityType="Self.Tai_khoan" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__Bang_cap__Ma_nha__2A4B4B5E" Association="Self.FK__Bang_cap__Ma_nha__2A4B4B5E">
+            <End Role="Nhan_vien" EntitySet="Nhan_vien" />
+            <End Role="Bang_cap" EntitySet="Bang_cap" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Bang_luon__Ma_nh__286302EC" Association="Self.FK__Bang_luon__Ma_nh__286302EC">
+            <End Role="Nhan_vien" EntitySet="Nhan_vien" />
+            <End Role="Bang_luong" EntitySet="Bang_luong" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Cham_cong__Ma_nh__25869641" Association="Self.FK__Cham_cong__Ma_nh__25869641">
+            <End Role="Nhan_vien" EntitySet="Nhan_vien" />
+            <End Role="Cham_cong" EntitySet="Cham_cong" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Don_xin_t__Ma_nh__2B3F6F97" Association="Self.FK__Don_xin_t__Ma_nh__2B3F6F97">
+            <End Role="Nhan_vien" EntitySet="Nhan_vien" />
+            <End Role="Don_xin_thoi_viec" EntitySet="Don_xin_thoi_viec" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Hop_dong__Ma_nha__267ABA7A" Association="Self.FK__Hop_dong__Ma_nha__267ABA7A">
+            <End Role="Nhan_vien" EntitySet="Nhan_vien" />
+            <End Role="Hop_dong" EntitySet="Hop_dong" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Nghi_phep__Ma_nh__276EDEB3" Association="Self.FK__Nghi_phep__Ma_nh__276EDEB3">
+            <End Role="Nhan_vien" EntitySet="Nhan_vien" />
+            <End Role="Nghi_phep" EntitySet="Nghi_phep" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Nhan_vien__Ma_ch__2D27B809" Association="Self.FK__Nhan_vien__Ma_ch__2D27B809">
+            <End Role="Chuc_vu" EntitySet="Chuc_vu" />
+            <End Role="Nhan_vien" EntitySet="Nhan_vien" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Nhan_vien__Ma_ph__2C3393D0" Association="Self.FK__Nhan_vien__Ma_ph__2C3393D0">
+            <End Role="Phong_ban" EntitySet="Phong_ban" />
+            <End Role="Nhan_vien" EntitySet="Nhan_vien" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Phu_cap__Ma_nhan__29572725" Association="Self.FK__Phu_cap__Ma_nhan__29572725">
+            <End Role="Nhan_vien" EntitySet="Nhan_vien" />
+            <End Role="Phu_cap" EntitySet="Phu_cap" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Tai_khoan__Ma_nh__2F10007B" Association="Self.FK__Tai_khoan__Ma_nh__2F10007B">
+            <End Role="Nhan_vien" EntitySet="Nhan_vien" />
+            <End Role="Tai_khoan" EntitySet="Tai_khoan" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Tai_khoan__Ma_qu__2E1BDC42" Association="Self.FK__Tai_khoan__Ma_qu__2E1BDC42">
+            <End Role="Quyen_han" EntitySet="Quyen_han" />
+            <End Role="Tai_khoan" EntitySet="Tai_khoan" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="QuanLy_NhanVienModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Bang_cap">
+          <Key>
+            <PropertyRef Name="Ma_bang_cap" />
+          </Key>
+          <Property Name="Ma_bang_cap" Type="Int32" Nullable="false" />
+          <Property Name="Ten_bang_cap" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Ten_co_so_giao_duc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Ngay_cap_bang" Type="DateTime" Precision="3" />
+          <Property Name="Hang_bang" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Chuyen_nganh_dao_tao" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Ma_nhan_vien" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Nhan_vien" Relationship="Self.FK__Bang_cap__Ma_nha__2A4B4B5E" FromRole="Bang_cap" ToRole="Nhan_vien" />
+        </EntityType>
+        <EntityType Name="Bang_luong">
+          <Key>
+            <PropertyRef Name="Ma_bang_luong" />
+          </Key>
+          <Property Name="Ma_bang_luong" Type="Int32" Nullable="false" />
+          <Property Name="Thang_tinh_luong" Type="DateTime" Precision="3" />
+          <Property Name="Luong_co_ban" Type="Double" />
+          <Property Name="So_gio_lam_them" Type="Double" />
+          <Property Name="Phu_cap" Type="Double" />
+          <Property Name="Luong_thuc_nhan" Type="Double" />
+          <Property Name="Ma_nhan_vien" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Nhan_vien" Relationship="Self.FK__Bang_luon__Ma_nh__286302EC" FromRole="Bang_luong" ToRole="Nhan_vien" />
+        </EntityType>
+        <EntityType Name="Cham_cong">
+          <Key>
+            <PropertyRef Name="Ma_cham_cong" />
+          </Key>
+          <Property Name="Ma_cham_cong" Type="Int32" Nullable="false" />
+          <Property Name="Ngay_lam_viec" Type="DateTime" Precision="3" />
+          <Property Name="So_gio_lam_viec_trong_ngay" Type="Double" />
+          <Property Name="Ma_nhan_vien" Type="Int32" Nullable="false" />
+          <Property Name="Ma_ban_cham_cong" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Nhan_vien" Relationship="Self.FK__Cham_cong__Ma_nh__25869641" FromRole="Cham_cong" ToRole="Nhan_vien" />
+        </EntityType>
+        <EntityType Name="Chuc_vu">
+          <Key>
+            <PropertyRef Name="Ma_chuc_vu" />
+          </Key>
+          <Property Name="Ma_chuc_vu" Type="Int32" Nullable="false" />
+          <Property Name="Ten_chuc_vu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Nhan_vien" Relationship="Self.FK__Nhan_vien__Ma_ch__2D27B809" FromRole="Chuc_vu" ToRole="Nhan_vien" />
+        </EntityType>
+        <EntityType Name="Don_xin_thoi_viec">
+          <Key>
+            <PropertyRef Name="Ma_don_xin_thoi_viec" />
+          </Key>
+          <Property Name="Ma_don_xin_thoi_viec" Type="Int32" Nullable="false" />
+          <Property Name="Ho_ten" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Chuc_vu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Ngay_nop_don" Type="DateTime" Precision="3" />
+          <Property Name="Ngay_du_kien_thoi_viec" Type="DateTime" Precision="3" />
+          <Property Name="Ly_do" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Trang_thai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Ma_nhan_vien" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Nhan_vien" Relationship="Self.FK__Don_xin_t__Ma_nh__2B3F6F97" FromRole="Don_xin_thoi_viec" ToRole="Nhan_vien" />
+        </EntityType>
+        <EntityType Name="Hop_dong">
+          <Key>
+            <PropertyRef Name="Ma_hop_dong" />
+          </Key>
+          <Property Name="Ma_hop_dong" Type="Int32" Nullable="false" />
+          <Property Name="Ngay_bat_dau" Type="DateTime" Precision="3" />
+          <Property Name="Ngay_ket_thuc" Type="DateTime" Precision="3" />
+          <Property Name="Muc_luong_co_ban" Type="Double" />
+          <Property Name="Ma_nhan_vien" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Nhan_vien" Relationship="Self.FK__Hop_dong__Ma_nha__267ABA7A" FromRole="Hop_dong" ToRole="Nhan_vien" />
+        </EntityType>
+        <EntityType Name="Nghi_phep">
+          <Key>
+            <PropertyRef Name="Ma_nghi_phep" />
+          </Key>
+          <Property Name="Ma_nghi_phep" Type="Int32" Nullable="false" />
+          <Property Name="Ngay_bat_dau_nghi" Type="DateTime" Precision="3" />
+          <Property Name="Ngay_ket_thuc_nghi" Type="DateTime" Precision="3" />
+          <Property Name="Trang_thai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Ma_nhan_vien" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Nhan_vien" Relationship="Self.FK__Nghi_phep__Ma_nh__276EDEB3" FromRole="Nghi_phep" ToRole="Nhan_vien" />
+        </EntityType>
+        <EntityType Name="Nhan_vien">
+          <Key>
+            <PropertyRef Name="Ma_nhan_vien" />
+          </Key>
+          <Property Name="Ma_nhan_vien" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Ho_va_ten" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Gioi_tinh" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="So_dien_thoai" Type="String" MaxLength="11" FixedLength="true" Unicode="false" />
+          <Property Name="Ten_chuc_vu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Ngay_bat_dau_lam_viec" Type="DateTime" Precision="3" />
+          <Property Name="Ma_phong_ban" Type="Int32" Nullable="false" />
+          <Property Name="Ma_chuc_vu" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Bang_cap" Relationship="Self.FK__Bang_cap__Ma_nha__2A4B4B5E" FromRole="Nhan_vien" ToRole="Bang_cap" />
+          <NavigationProperty Name="Bang_luong" Relationship="Self.FK__Bang_luon__Ma_nh__286302EC" FromRole="Nhan_vien" ToRole="Bang_luong" />
+          <NavigationProperty Name="Cham_cong" Relationship="Self.FK__Cham_cong__Ma_nh__25869641" FromRole="Nhan_vien" ToRole="Cham_cong" />
+          <NavigationProperty Name="Chuc_vu" Relationship="Self.FK__Nhan_vien__Ma_ch__2D27B809" FromRole="Nhan_vien" ToRole="Chuc_vu" />
+          <NavigationProperty Name="Don_xin_thoi_viec" Relationship="Self.FK__Don_xin_t__Ma_nh__2B3F6F97" FromRole="Nhan_vien" ToRole="Don_xin_thoi_viec" />
+          <NavigationProperty Name="Hop_dong" Relationship="Self.FK__Hop_dong__Ma_nha__267ABA7A" FromRole="Nhan_vien" ToRole="Hop_dong" />
+          <NavigationProperty Name="Nghi_phep" Relationship="Self.FK__Nghi_phep__Ma_nh__276EDEB3" FromRole="Nhan_vien" ToRole="Nghi_phep" />
+          <NavigationProperty Name="Phong_ban" Relationship="Self.FK__Nhan_vien__Ma_ph__2C3393D0" FromRole="Nhan_vien" ToRole="Phong_ban" />
+          <NavigationProperty Name="Phu_cap" Relationship="Self.FK__Phu_cap__Ma_nhan__29572725" FromRole="Nhan_vien" ToRole="Phu_cap" />
+          <NavigationProperty Name="Tai_khoan" Relationship="Self.FK__Tai_khoan__Ma_nh__2F10007B" FromRole="Nhan_vien" ToRole="Tai_khoan" />
+        </EntityType>
+        <EntityType Name="Phong_ban">
+          <Key>
+            <PropertyRef Name="Ma_phong_ban" />
+          </Key>
+          <Property Name="Ma_phong_ban" Type="Int32" Nullable="false" />
+          <Property Name="Ten_phong_ban" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Nhan_vien" Relationship="Self.FK__Nhan_vien__Ma_ph__2C3393D0" FromRole="Phong_ban" ToRole="Nhan_vien" />
+        </EntityType>
+        <EntityType Name="Phu_cap">
+          <Key>
+            <PropertyRef Name="Ma_phu_cap" />
+          </Key>
+          <Property Name="Ma_phu_cap" Type="Int32" Nullable="false" />
+          <Property Name="Loai_phu_cap" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="So_tien_phu_cap" Type="Double" />
+          <Property Name="Ma_nhan_vien" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Nhan_vien" Relationship="Self.FK__Phu_cap__Ma_nhan__29572725" FromRole="Phu_cap" ToRole="Nhan_vien" />
+        </EntityType>
+        <EntityType Name="Quyen_han">
+          <Key>
+            <PropertyRef Name="Ma_quyen_han" />
+          </Key>
+          <Property Name="Ma_quyen_han" Type="Int32" Nullable="false" />
+          <Property Name="Ten_quyen_han" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Tai_khoan" Relationship="Self.FK__Tai_khoan__Ma_qu__2E1BDC42" FromRole="Quyen_han" ToRole="Tai_khoan" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Tai_khoan">
+          <Key>
+            <PropertyRef Name="Ma_tai_khoan" />
+          </Key>
+          <Property Name="Ma_tai_khoan" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Ten_tai_khoan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Mat_khau" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Ma_quyen_han" Type="Int32" Nullable="false" />
+          <Property Name="Ma_nhan_vien" Type="Int32" />
+          <NavigationProperty Name="Nhan_vien" Relationship="Self.FK__Tai_khoan__Ma_nh__2F10007B" FromRole="Tai_khoan" ToRole="Nhan_vien" />
+          <NavigationProperty Name="Quyen_han" Relationship="Self.FK__Tai_khoan__Ma_qu__2E1BDC42" FromRole="Tai_khoan" ToRole="Quyen_han" />
+        </EntityType>
+        <Association Name="FK__Bang_cap__Ma_nha__2A4B4B5E">
+          <End Role="Nhan_vien" Type="Self.Nhan_vien" Multiplicity="1" />
+          <End Role="Bang_cap" Type="Self.Bang_cap" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Nhan_vien">
+              <PropertyRef Name="Ma_nhan_vien" />
+            </Principal>
+            <Dependent Role="Bang_cap">
+              <PropertyRef Name="Ma_nhan_vien" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Bang_luon__Ma_nh__286302EC">
+          <End Role="Nhan_vien" Type="Self.Nhan_vien" Multiplicity="1" />
+          <End Role="Bang_luong" Type="Self.Bang_luong" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Nhan_vien">
+              <PropertyRef Name="Ma_nhan_vien" />
+            </Principal>
+            <Dependent Role="Bang_luong">
+              <PropertyRef Name="Ma_nhan_vien" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Cham_cong__Ma_nh__25869641">
+          <End Role="Nhan_vien" Type="Self.Nhan_vien" Multiplicity="1" />
+          <End Role="Cham_cong" Type="Self.Cham_cong" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Nhan_vien">
+              <PropertyRef Name="Ma_nhan_vien" />
+            </Principal>
+            <Dependent Role="Cham_cong">
+              <PropertyRef Name="Ma_nhan_vien" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Nhan_vien__Ma_ch__2D27B809">
+          <End Role="Chuc_vu" Type="Self.Chuc_vu" Multiplicity="1" />
+          <End Role="Nhan_vien" Type="Self.Nhan_vien" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Chuc_vu">
+              <PropertyRef Name="Ma_chuc_vu" />
+            </Principal>
+            <Dependent Role="Nhan_vien">
+              <PropertyRef Name="Ma_chuc_vu" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Don_xin_t__Ma_nh__2B3F6F97">
+          <End Role="Nhan_vien" Type="Self.Nhan_vien" Multiplicity="1" />
+          <End Role="Don_xin_thoi_viec" Type="Self.Don_xin_thoi_viec" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Nhan_vien">
+              <PropertyRef Name="Ma_nhan_vien" />
+            </Principal>
+            <Dependent Role="Don_xin_thoi_viec">
+              <PropertyRef Name="Ma_nhan_vien" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Hop_dong__Ma_nha__267ABA7A">
+          <End Role="Nhan_vien" Type="Self.Nhan_vien" Multiplicity="1" />
+          <End Role="Hop_dong" Type="Self.Hop_dong" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Nhan_vien">
+              <PropertyRef Name="Ma_nhan_vien" />
+            </Principal>
+            <Dependent Role="Hop_dong">
+              <PropertyRef Name="Ma_nhan_vien" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Nghi_phep__Ma_nh__276EDEB3">
+          <End Role="Nhan_vien" Type="Self.Nhan_vien" Multiplicity="1" />
+          <End Role="Nghi_phep" Type="Self.Nghi_phep" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Nhan_vien">
+              <PropertyRef Name="Ma_nhan_vien" />
+            </Principal>
+            <Dependent Role="Nghi_phep">
+              <PropertyRef Name="Ma_nhan_vien" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Nhan_vien__Ma_ph__2C3393D0">
+          <End Role="Phong_ban" Type="Self.Phong_ban" Multiplicity="1" />
+          <End Role="Nhan_vien" Type="Self.Nhan_vien" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Phong_ban">
+              <PropertyRef Name="Ma_phong_ban" />
+            </Principal>
+            <Dependent Role="Nhan_vien">
+              <PropertyRef Name="Ma_phong_ban" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Phu_cap__Ma_nhan__29572725">
+          <End Role="Nhan_vien" Type="Self.Nhan_vien" Multiplicity="1" />
+          <End Role="Phu_cap" Type="Self.Phu_cap" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Nhan_vien">
+              <PropertyRef Name="Ma_nhan_vien" />
+            </Principal>
+            <Dependent Role="Phu_cap">
+              <PropertyRef Name="Ma_nhan_vien" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Tai_khoan__Ma_nh__2F10007B">
+          <End Role="Nhan_vien" Type="Self.Nhan_vien" Multiplicity="0..1" />
+          <End Role="Tai_khoan" Type="Self.Tai_khoan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Nhan_vien">
+              <PropertyRef Name="Ma_nhan_vien" />
+            </Principal>
+            <Dependent Role="Tai_khoan">
+              <PropertyRef Name="Ma_nhan_vien" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Tai_khoan__Ma_qu__2E1BDC42">
+          <End Role="Quyen_han" Type="Self.Quyen_han" Multiplicity="1" />
+          <End Role="Tai_khoan" Type="Self.Tai_khoan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Quyen_han">
+              <PropertyRef Name="Ma_quyen_han" />
+            </Principal>
+            <Dependent Role="Tai_khoan">
+              <PropertyRef Name="Ma_quyen_han" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="QuanLy_NhanVienEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Bang_cap" EntityType="Self.Bang_cap" />
+          <EntitySet Name="Bang_luong" EntityType="Self.Bang_luong" />
+          <EntitySet Name="Cham_cong" EntityType="Self.Cham_cong" />
+          <EntitySet Name="Chuc_vu" EntityType="Self.Chuc_vu" />
+          <EntitySet Name="Don_xin_thoi_viec" EntityType="Self.Don_xin_thoi_viec" />
+          <EntitySet Name="Hop_dong" EntityType="Self.Hop_dong" />
+          <EntitySet Name="Nghi_phep" EntityType="Self.Nghi_phep" />
+          <EntitySet Name="Nhan_vien" EntityType="Self.Nhan_vien" />
+          <EntitySet Name="Phong_ban" EntityType="Self.Phong_ban" />
+          <EntitySet Name="Phu_cap" EntityType="Self.Phu_cap" />
+          <EntitySet Name="Quyen_han" EntityType="Self.Quyen_han" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+          <EntitySet Name="Tai_khoan" EntityType="Self.Tai_khoan" />
+          <AssociationSet Name="FK__Bang_cap__Ma_nha__2A4B4B5E" Association="Self.FK__Bang_cap__Ma_nha__2A4B4B5E">
+            <End Role="Nhan_vien" EntitySet="Nhan_vien" />
+            <End Role="Bang_cap" EntitySet="Bang_cap" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Bang_luon__Ma_nh__286302EC" Association="Self.FK__Bang_luon__Ma_nh__286302EC">
+            <End Role="Nhan_vien" EntitySet="Nhan_vien" />
+            <End Role="Bang_luong" EntitySet="Bang_luong" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Cham_cong__Ma_nh__25869641" Association="Self.FK__Cham_cong__Ma_nh__25869641">
+            <End Role="Nhan_vien" EntitySet="Nhan_vien" />
+            <End Role="Cham_cong" EntitySet="Cham_cong" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Nhan_vien__Ma_ch__2D27B809" Association="Self.FK__Nhan_vien__Ma_ch__2D27B809">
+            <End Role="Chuc_vu" EntitySet="Chuc_vu" />
+            <End Role="Nhan_vien" EntitySet="Nhan_vien" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Don_xin_t__Ma_nh__2B3F6F97" Association="Self.FK__Don_xin_t__Ma_nh__2B3F6F97">
+            <End Role="Nhan_vien" EntitySet="Nhan_vien" />
+            <End Role="Don_xin_thoi_viec" EntitySet="Don_xin_thoi_viec" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Hop_dong__Ma_nha__267ABA7A" Association="Self.FK__Hop_dong__Ma_nha__267ABA7A">
+            <End Role="Nhan_vien" EntitySet="Nhan_vien" />
+            <End Role="Hop_dong" EntitySet="Hop_dong" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Nghi_phep__Ma_nh__276EDEB3" Association="Self.FK__Nghi_phep__Ma_nh__276EDEB3">
+            <End Role="Nhan_vien" EntitySet="Nhan_vien" />
+            <End Role="Nghi_phep" EntitySet="Nghi_phep" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Nhan_vien__Ma_ph__2C3393D0" Association="Self.FK__Nhan_vien__Ma_ph__2C3393D0">
+            <End Role="Phong_ban" EntitySet="Phong_ban" />
+            <End Role="Nhan_vien" EntitySet="Nhan_vien" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Phu_cap__Ma_nhan__29572725" Association="Self.FK__Phu_cap__Ma_nhan__29572725">
+            <End Role="Nhan_vien" EntitySet="Nhan_vien" />
+            <End Role="Phu_cap" EntitySet="Phu_cap" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Tai_khoan__Ma_nh__2F10007B" Association="Self.FK__Tai_khoan__Ma_nh__2F10007B">
+            <End Role="Nhan_vien" EntitySet="Nhan_vien" />
+            <End Role="Tai_khoan" EntitySet="Tai_khoan" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Tai_khoan__Ma_qu__2E1BDC42" Association="Self.FK__Tai_khoan__Ma_qu__2E1BDC42">
+            <End Role="Quyen_han" EntitySet="Quyen_han" />
+            <End Role="Tai_khoan" EntitySet="Tai_khoan" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="QuanLy_NhanVienModelStoreContainer" CdmEntityContainer="QuanLy_NhanVienEntities">
+          <EntitySetMapping Name="Bang_cap">
+            <EntityTypeMapping TypeName="QuanLy_NhanVienModel.Bang_cap">
+              <MappingFragment StoreEntitySet="Bang_cap">
+                <ScalarProperty Name="Ma_bang_cap" ColumnName="Ma_bang_cap" />
+                <ScalarProperty Name="Ten_bang_cap" ColumnName="Ten_bang_cap" />
+                <ScalarProperty Name="Ten_co_so_giao_duc" ColumnName="Ten_co_so_giao_duc" />
+                <ScalarProperty Name="Ngay_cap_bang" ColumnName="Ngay_cap_bang" />
+                <ScalarProperty Name="Hang_bang" ColumnName="Hang_bang" />
+                <ScalarProperty Name="Chuyen_nganh_dao_tao" ColumnName="Chuyen_nganh_dao_tao" />
+                <ScalarProperty Name="Ma_nhan_vien" ColumnName="Ma_nhan_vien" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Bang_luong">
+            <EntityTypeMapping TypeName="QuanLy_NhanVienModel.Bang_luong">
+              <MappingFragment StoreEntitySet="Bang_luong">
+                <ScalarProperty Name="Ma_bang_luong" ColumnName="Ma_bang_luong" />
+                <ScalarProperty Name="Thang_tinh_luong" ColumnName="Thang_tinh_luong" />
+                <ScalarProperty Name="Luong_co_ban" ColumnName="Luong_co_ban" />
+                <ScalarProperty Name="So_gio_lam_them" ColumnName="So_gio_lam_them" />
+                <ScalarProperty Name="Phu_cap" ColumnName="Phu_cap" />
+                <ScalarProperty Name="Luong_thuc_nhan" ColumnName="Luong_thuc_nhan" />
+                <ScalarProperty Name="Ma_nhan_vien" ColumnName="Ma_nhan_vien" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cham_cong">
+            <EntityTypeMapping TypeName="QuanLy_NhanVienModel.Cham_cong">
+              <MappingFragment StoreEntitySet="Cham_cong">
+                <ScalarProperty Name="Ma_cham_cong" ColumnName="Ma_cham_cong" />
+                <ScalarProperty Name="Ngay_lam_viec" ColumnName="Ngay_lam_viec" />
+                <ScalarProperty Name="So_gio_lam_viec_trong_ngay" ColumnName="So_gio_lam_viec_trong_ngay" />
+                <ScalarProperty Name="Ma_nhan_vien" ColumnName="Ma_nhan_vien" />
+                <ScalarProperty Name="Ma_ban_cham_cong" ColumnName="Ma_ban_cham_cong" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Chuc_vu">
+            <EntityTypeMapping TypeName="QuanLy_NhanVienModel.Chuc_vu">
+              <MappingFragment StoreEntitySet="Chuc_vu">
+                <ScalarProperty Name="Ma_chuc_vu" ColumnName="Ma_chuc_vu" />
+                <ScalarProperty Name="Ten_chuc_vu" ColumnName="Ten_chuc_vu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Don_xin_thoi_viec">
+            <EntityTypeMapping TypeName="QuanLy_NhanVienModel.Don_xin_thoi_viec">
+              <MappingFragment StoreEntitySet="Don_xin_thoi_viec">
+                <ScalarProperty Name="Ma_don_xin_thoi_viec" ColumnName="Ma_don_xin_thoi_viec" />
+                <ScalarProperty Name="Ho_ten" ColumnName="Ho_ten" />
+                <ScalarProperty Name="Chuc_vu" ColumnName="Chuc_vu" />
+                <ScalarProperty Name="Ngay_nop_don" ColumnName="Ngay_nop_don" />
+                <ScalarProperty Name="Ngay_du_kien_thoi_viec" ColumnName="Ngay_du_kien_thoi_viec" />
+                <ScalarProperty Name="Ly_do" ColumnName="Ly_do" />
+                <ScalarProperty Name="Trang_thai" ColumnName="Trang_thai" />
+                <ScalarProperty Name="Ma_nhan_vien" ColumnName="Ma_nhan_vien" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Hop_dong">
+            <EntityTypeMapping TypeName="QuanLy_NhanVienModel.Hop_dong">
+              <MappingFragment StoreEntitySet="Hop_dong">
+                <ScalarProperty Name="Ma_hop_dong" ColumnName="Ma_hop_dong" />
+                <ScalarProperty Name="Ngay_bat_dau" ColumnName="Ngay_bat_dau" />
+                <ScalarProperty Name="Ngay_ket_thuc" ColumnName="Ngay_ket_thuc" />
+                <ScalarProperty Name="Muc_luong_co_ban" ColumnName="Muc_luong_co_ban" />
+                <ScalarProperty Name="Ma_nhan_vien" ColumnName="Ma_nhan_vien" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Nghi_phep">
+            <EntityTypeMapping TypeName="QuanLy_NhanVienModel.Nghi_phep">
+              <MappingFragment StoreEntitySet="Nghi_phep">
+                <ScalarProperty Name="Ma_nghi_phep" ColumnName="Ma_nghi_phep" />
+                <ScalarProperty Name="Ngay_bat_dau_nghi" ColumnName="Ngay_bat_dau_nghi" />
+                <ScalarProperty Name="Ngay_ket_thuc_nghi" ColumnName="Ngay_ket_thuc_nghi" />
+                <ScalarProperty Name="Trang_thai" ColumnName="Trang_thai" />
+                <ScalarProperty Name="Ma_nhan_vien" ColumnName="Ma_nhan_vien" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Nhan_vien">
+            <EntityTypeMapping TypeName="QuanLy_NhanVienModel.Nhan_vien">
+              <MappingFragment StoreEntitySet="Nhan_vien">
+                <ScalarProperty Name="Ma_nhan_vien" ColumnName="Ma_nhan_vien" />
+                <ScalarProperty Name="Ho_va_ten" ColumnName="Ho_va_ten" />
+                <ScalarProperty Name="Gioi_tinh" ColumnName="Gioi_tinh" />
+                <ScalarProperty Name="So_dien_thoai" ColumnName="So_dien_thoai" />
+                <ScalarProperty Name="Ten_chuc_vu" ColumnName="Ten_chuc_vu" />
+                <ScalarProperty Name="Ngay_bat_dau_lam_viec" ColumnName="Ngay_bat_dau_lam_viec" />
+                <ScalarProperty Name="Ma_phong_ban" ColumnName="Ma_phong_ban" />
+                <ScalarProperty Name="Ma_chuc_vu" ColumnName="Ma_chuc_vu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Phong_ban">
+            <EntityTypeMapping TypeName="QuanLy_NhanVienModel.Phong_ban">
+              <MappingFragment StoreEntitySet="Phong_ban">
+                <ScalarProperty Name="Ma_phong_ban" ColumnName="Ma_phong_ban" />
+                <ScalarProperty Name="Ten_phong_ban" ColumnName="Ten_phong_ban" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Phu_cap">
+            <EntityTypeMapping TypeName="QuanLy_NhanVienModel.Phu_cap">
+              <MappingFragment StoreEntitySet="Phu_cap">
+                <ScalarProperty Name="Ma_phu_cap" ColumnName="Ma_phu_cap" />
+                <ScalarProperty Name="Loai_phu_cap" ColumnName="Loai_phu_cap" />
+                <ScalarProperty Name="So_tien_phu_cap" ColumnName="So_tien_phu_cap" />
+                <ScalarProperty Name="Ma_nhan_vien" ColumnName="Ma_nhan_vien" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Quyen_han">
+            <EntityTypeMapping TypeName="QuanLy_NhanVienModel.Quyen_han">
+              <MappingFragment StoreEntitySet="Quyen_han">
+                <ScalarProperty Name="Ma_quyen_han" ColumnName="Ma_quyen_han" />
+                <ScalarProperty Name="Ten_quyen_han" ColumnName="Ten_quyen_han" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="QuanLy_NhanVienModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tai_khoan">
+            <EntityTypeMapping TypeName="QuanLy_NhanVienModel.Tai_khoan">
+              <MappingFragment StoreEntitySet="Tai_khoan">
+                <ScalarProperty Name="Ma_tai_khoan" ColumnName="Ma_tai_khoan" />
+                <ScalarProperty Name="Ten_tai_khoan" ColumnName="Ten_tai_khoan" />
+                <ScalarProperty Name="Mat_khau" ColumnName="Mat_khau" />
+                <ScalarProperty Name="Ma_quyen_han" ColumnName="Ma_quyen_han" />
+                <ScalarProperty Name="Ma_nhan_vien" ColumnName="Ma_nhan_vien" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

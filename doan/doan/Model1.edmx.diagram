@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ff6504a8d8b443d6a5a580c3ca68735c" Name="Diagram1">
+        <EntityTypeShape EntityType="QuanLy_NhanVienModel.Bang_cap" Width="1.5" PointX="5.25" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLy_NhanVienModel.Bang_luong" Width="1.5" PointX="5.25" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLy_NhanVienModel.Cham_cong" Width="1.5" PointX="5.25" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLy_NhanVienModel.Chuc_vu" Width="1.5" PointX="0.75" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLy_NhanVienModel.Don_xin_thoi_viec" Width="1.5" PointX="5.25" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLy_NhanVienModel.Hop_dong" Width="1.5" PointX="5.25" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLy_NhanVienModel.Nghi_phep" Width="1.5" PointX="5.25" PointY="19.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLy_NhanVienModel.Nhan_vien" Width="1.5" PointX="3" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLy_NhanVienModel.Phong_ban" Width="1.5" PointX="0.75" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLy_NhanVienModel.Phu_cap" Width="1.5" PointX="5.25" PointY="22.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLy_NhanVienModel.Quyen_han" Width="1.5" PointX="6" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLy_NhanVienModel.sysdiagram" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLy_NhanVienModel.Tai_khoan" Width="1.5" PointX="8.25" PointY="12.875" IsExpanded="true" />
+        <AssociationConnector Association="QuanLy_NhanVienModel.FK__Bang_cap__Ma_nha__2A4B4B5E" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLy_NhanVienModel.FK__Bang_luon__Ma_nh__286302EC" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLy_NhanVienModel.FK__Cham_cong__Ma_nh__25869641" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLy_NhanVienModel.FK__Nhan_vien__Ma_ch__2D27B809" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLy_NhanVienModel.FK__Don_xin_t__Ma_nh__2B3F6F97" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLy_NhanVienModel.FK__Hop_dong__Ma_nha__267ABA7A" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLy_NhanVienModel.FK__Nghi_phep__Ma_nh__276EDEB3" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLy_NhanVienModel.FK__Nhan_vien__Ma_ph__2C3393D0" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLy_NhanVienModel.FK__Phu_cap__Ma_nhan__29572725" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLy_NhanVienModel.FK__Tai_khoan__Ma_nh__2F10007B" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLy_NhanVienModel.FK__Tai_khoan__Ma_qu__2E1BDC42" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
