@@ -64,6 +64,30 @@
     <Compile Include="Bang_luong.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="cac form quan ly\cacbangdon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cac form quan ly\cacbangdon.Designer.cs">
+      <DependentUpon>cacbangdon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cac form quan ly\phucap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cac form quan ly\phucap.Designer.cs">
+      <DependentUpon>phucap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cac form quan ly\themnhanvien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cac form quan ly\themnhanvien.Designer.cs">
+      <DependentUpon>themnhanvien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cac form quan ly\themtaikhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cac form quan ly\themtaikhoan.Designer.cs">
+      <DependentUpon>themtaikhoan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cham_cong.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -94,6 +118,7 @@
     <Compile Include="Hop_dong.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="LoaiPhuCap.cs" />
     <Compile Include="Model1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -112,6 +137,7 @@
     <Compile Include="Nghi_phep.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="NhanVien.cs" />
     <Compile Include="Nhan_vien.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -132,8 +158,23 @@
     <Compile Include="Tai_khoan.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="cac form quan ly\cacbangdon.resx">
+      <DependentUpon>cacbangdon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cac form quan ly\phucap.resx">
+      <DependentUpon>phucap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cac form quan ly\themnhanvien.resx">
+      <DependentUpon>themnhanvien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cac form quan ly\themtaikhoan.resx">
+      <DependentUpon>themtaikhoan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuanLy.resx">
+      <DependentUpon>FormQuanLy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
