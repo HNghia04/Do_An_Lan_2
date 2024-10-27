@@ -136,6 +136,29 @@ namespace doan.cac_form_quan_ly
                 return;
             }
 
+            // Kiểm tra nếu số tiền phụ cấp lớn hơn 5000
+            if (soTienPhuCap < 5000)
+            {
+                MessageBox.Show("Số tiền phụ cấp phải lớn hơn 5000.");
+                return;
+            }
+
+            // Kiểm tra xem mã phụ cấp đã tồn tại chưa
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                string checkQuery = "SELECT COUNT(*) FROM Phu_cap WHERE Ma_phu_cap = @MaPhucap";
+                SqlCommand checkCmd = new SqlCommand(checkQuery, conn);
+                checkCmd.Parameters.AddWithValue("@MaPhucap", maPhucap);
+
+                int count = (int)checkCmd.ExecuteScalar();
+                if (count > 0)
+                {
+                    MessageBox.Show("Mã phụ cấp đã tồn tại. Vui lòng nhập mã khác.");
+                    return;
+                }
+            }
+
             // Kết nối đến cơ sở dữ liệu và thực hiện thêm phụ cấp
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
@@ -154,6 +177,8 @@ namespace doan.cac_form_quan_ly
                 LoadDataPhuCap();
             }
         }
+
+
         private void bttthoat_Click(object sender, EventArgs e)
         {
             FormQuanLy f = new FormQuanLy();
