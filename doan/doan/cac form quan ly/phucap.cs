@@ -73,7 +73,6 @@ namespace doan.cac_form_quan_ly
                 guna2DataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             }
         }
-
         private void LoadNhanVienData()
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
@@ -106,10 +105,8 @@ namespace doan.cac_form_quan_ly
                 cbxhotenphucap.ValueMember = "MaNhanVien";
             }
         }
-
         private void phucap_Load(object sender, EventArgs e)
         {
-
         }
         private void bttthem_Click(object sender, EventArgs e)
         {
@@ -157,10 +154,6 @@ namespace doan.cac_form_quan_ly
                 LoadDataPhuCap();
             }
         }
-
-
-
-
         private void bttthoat_Click(object sender, EventArgs e)
         {
             FormQuanLy f = new FormQuanLy();
@@ -221,7 +214,6 @@ namespace doan.cac_form_quan_ly
                 }
             }
         }
-
         private void bttxoa_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtmaphucap.Text))
@@ -252,6 +244,5 @@ namespace doan.cac_form_quan_ly
                 }
             }
         }
-
     }
 }

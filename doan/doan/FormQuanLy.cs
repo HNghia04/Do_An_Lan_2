@@ -115,5 +115,19 @@ namespace doan
             f.Show();
             this.Hide();
         }
+
+        private void bttbangluong_Click(object sender, EventArgs e)
+        {
+            bangluong f = new bangluong();
+            f.Show();
+            this.Hide();
+        }
+
+        private void bttbangdon_Click(object sender, EventArgs e)
+        {
+            cacbangdon f = new cacbangdon();
+            f.Show();
+            this.Hide();
+        }
     }
 }

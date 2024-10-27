@@ -35,6 +35,7 @@
             this.bttsua = new Guna.UI2.WinForms.Guna2Button();
             this.bttxoa = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.dtpngaybatdau = new System.Windows.Forms.DateTimePicker();
             this.cmbphongban = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -47,7 +48,6 @@
             this.txthoten = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.dtpngaybatdau = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.guna2GroupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -164,6 +164,13 @@
             this.guna2GroupBox1.Size = new System.Drawing.Size(974, 1110);
             this.guna2GroupBox1.TabIndex = 18;
             this.guna2GroupBox1.Text = "Thông tin nhân viên";
+            // 
+            // dtpngaybatdau
+            // 
+            this.dtpngaybatdau.Location = new System.Drawing.Point(30, 874);
+            this.dtpngaybatdau.Name = "dtpngaybatdau";
+            this.dtpngaybatdau.Size = new System.Drawing.Size(402, 35);
+            this.dtpngaybatdau.TabIndex = 28;
             // 
             // cmbphongban
             // 
@@ -339,13 +346,6 @@
             this.guna2CircleButton1.TabIndex = 19;
             this.guna2CircleButton1.Click += new System.EventHandler(this.guna2CircleButton1_Click);
             // 
-            // dtpngaybatdau
-            // 
-            this.dtpngaybatdau.Location = new System.Drawing.Point(30, 874);
-            this.dtpngaybatdau.Name = "dtpngaybatdau";
-            this.dtpngaybatdau.Size = new System.Drawing.Size(402, 35);
-            this.dtpngaybatdau.TabIndex = 28;
-            // 
             // themnhanvien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
@@ -357,6 +357,7 @@
             this.Controls.Add(this.label1);
             this.Name = "themnhanvien";
             this.Text = "themnhanvien";
+            this.Load += new System.EventHandler(this.themnhanvien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.guna2GroupBox1.ResumeLayout(false);
             this.guna2GroupBox1.PerformLayout();

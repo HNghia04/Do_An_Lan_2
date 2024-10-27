@@ -276,5 +276,10 @@ namespace doan.cac_form_quan_ly
                 }
             }
         }
+
+        private void themnhanvien_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
