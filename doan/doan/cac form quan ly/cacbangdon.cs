@@ -126,6 +126,7 @@ namespace doan.cac_form_quan_ly
             }
         }
 
+
         private void cacbangdon_Load(object sender, EventArgs e)
         {
 
@@ -275,6 +276,13 @@ namespace doan.cac_form_quan_ly
         private void bttnghiphep_Click(object sender, EventArgs e)
         {
             nghiphep f = new nghiphep();
+            f.Show();
+            this.Hide();
+        }
+
+        private void btthopdong_Click(object sender, EventArgs e)
+        {
+            hopdong f = new hopdong();
             f.Show();
             this.Hide();
         }

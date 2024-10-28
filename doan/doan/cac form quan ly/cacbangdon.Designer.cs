@@ -35,18 +35,18 @@
             this.btthopdong = new Guna.UI2.WinForms.Guna2Button();
             this.bttbangcap = new Guna.UI2.WinForms.Guna2Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.bttnghiphep = new Guna.UI2.WinForms.Guna2Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.bttnghiphep = new Guna.UI2.WinForms.Guna2Button();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             this.SuspendLayout();
             // 
             // bttthoat
@@ -122,6 +122,7 @@
             this.btthopdong.Size = new System.Drawing.Size(351, 115);
             this.btthopdong.TabIndex = 3;
             this.btthopdong.Text = "Hợp đồng";
+            this.btthopdong.Click += new System.EventHandler(this.btthopdong_Click);
             // 
             // bttbangcap
             // 
@@ -154,6 +155,26 @@
             this.panel1.Size = new System.Drawing.Size(2245, 182);
             this.panel1.TabIndex = 7;
             // 
+            // bttnghiphep
+            // 
+            this.bttnghiphep.BackColor = System.Drawing.SystemColors.Control;
+            this.bttnghiphep.BorderRadius = 18;
+            this.bttnghiphep.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.bttnghiphep.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.bttnghiphep.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.bttnghiphep.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.bttnghiphep.FillColor = System.Drawing.Color.MediumPurple;
+            this.bttnghiphep.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.bttnghiphep.ForeColor = System.Drawing.Color.White;
+            this.bttnghiphep.Image = ((System.Drawing.Image)(resources.GetObject("bttnghiphep.Image")));
+            this.bttnghiphep.ImageSize = new System.Drawing.Size(60, 60);
+            this.bttnghiphep.Location = new System.Drawing.Point(1784, 23);
+            this.bttnghiphep.Name = "bttnghiphep";
+            this.bttnghiphep.Size = new System.Drawing.Size(351, 115);
+            this.bttnghiphep.TabIndex = 7;
+            this.bttnghiphep.Text = "Nghỉ phép";
+            this.bttnghiphep.Click += new System.EventHandler(this.bttnghiphep_Click);
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.Control;
@@ -165,6 +186,18 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(2245, 904);
             this.panel2.TabIndex = 8;
+            // 
+            // dataGridView4
+            // 
+            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView4.Location = new System.Drawing.Point(1702, 62);
+            this.dataGridView4.Name = "dataGridView4";
+            this.dataGridView4.ReadOnly = true;
+            this.dataGridView4.RowHeadersWidth = 72;
+            this.dataGridView4.RowTemplate.Height = 31;
+            this.dataGridView4.Size = new System.Drawing.Size(499, 794);
+            this.dataGridView4.TabIndex = 3;
+            this.dataGridView4.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView4_CellContentClick);
             // 
             // dataGridView3
             // 
@@ -202,38 +235,6 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // bttnghiphep
-            // 
-            this.bttnghiphep.BackColor = System.Drawing.SystemColors.Control;
-            this.bttnghiphep.BorderRadius = 18;
-            this.bttnghiphep.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.bttnghiphep.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.bttnghiphep.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.bttnghiphep.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.bttnghiphep.FillColor = System.Drawing.Color.MediumPurple;
-            this.bttnghiphep.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.bttnghiphep.ForeColor = System.Drawing.Color.White;
-            this.bttnghiphep.Image = ((System.Drawing.Image)(resources.GetObject("bttnghiphep.Image")));
-            this.bttnghiphep.ImageSize = new System.Drawing.Size(60, 60);
-            this.bttnghiphep.Location = new System.Drawing.Point(1784, 23);
-            this.bttnghiphep.Name = "bttnghiphep";
-            this.bttnghiphep.Size = new System.Drawing.Size(351, 115);
-            this.bttnghiphep.TabIndex = 7;
-            this.bttnghiphep.Text = "Nghỉ phép";
-            this.bttnghiphep.Click += new System.EventHandler(this.bttnghiphep_Click);
-            // 
-            // dataGridView4
-            // 
-            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Location = new System.Drawing.Point(1702, 62);
-            this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.ReadOnly = true;
-            this.dataGridView4.RowHeadersWidth = 72;
-            this.dataGridView4.RowTemplate.Height = 31;
-            this.dataGridView4.Size = new System.Drawing.Size(499, 794);
-            this.dataGridView4.TabIndex = 3;
-            this.dataGridView4.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView4_CellContentClick);
-            // 
             // cacbangdon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
@@ -248,10 +249,10 @@
             this.Load += new System.EventHandler(this.cacbangdon_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             this.ResumeLayout(false);
 
         }
