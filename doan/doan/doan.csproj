@@ -64,6 +64,12 @@
     <Compile Include="Bang_luong.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="cac form nhan vien\chamcong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cac form nhan vien\chamcong.Designer.cs">
+      <DependentUpon>chamcong.cs</DependentUpon>
+    </Compile>
     <Compile Include="cac form quan ly\bangcap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,6 +194,9 @@
     <Compile Include="Tai_khoan.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="cac form nhan vien\chamcong.resx">
+      <DependentUpon>chamcong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="cac form quan ly\bangcap.resx">
       <DependentUpon>bangcap.cs</DependentUpon>
     </EmbeddedResource>

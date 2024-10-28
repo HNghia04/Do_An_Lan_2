@@ -1,4 +1,5 @@
-﻿using System;
+﻿using doan.cac_form_nhan_vien;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,13 @@ namespace doan
         private void bttthoat_Click(object sender, EventArgs e)
         {
             Form1 f = new Form1();
+            f.Show();
+            this.Hide();
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            chamcong f = new chamcong();
             f.Show();
             this.Hide();
         }
