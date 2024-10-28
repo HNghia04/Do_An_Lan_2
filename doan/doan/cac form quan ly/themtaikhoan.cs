@@ -96,8 +96,9 @@ namespace doan.cac_form_quan_ly
         }
         private void guna2CircleButton1_Click(object sender, EventArgs e)
         {
-            FormQuanLy f = new FormQuanLy();
-            f.Show();
+            int maQuyenHan = 1; // Hoặc lấy giá trị từ biến nào đó
+            FormQuanLy formQuanLy = new FormQuanLy(maQuyenHan);
+            formQuanLy.Show();
             this.Hide();
         }
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)

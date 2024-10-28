@@ -117,8 +117,11 @@ namespace doan.cac_form_quan_ly
 
         private void guna2CircleButton1_Click(object sender, EventArgs e)
         {
-            FormQuanLy f = new FormQuanLy();
-            f.Show();
+            int maQuyenHan = 1; // Gán giá trị cho maQuyenHan (hoặc lấy từ nguồn khác)
+
+            // Khởi tạo FormQuanLy với tham số maQuyenHan
+            FormQuanLy formQuanLy = new FormQuanLy(maQuyenHan);
+            formQuanLy.Show();
             this.Hide();
         }
 

@@ -28,10 +28,8 @@ namespace doan
 
         private void bttdangnhap_Click(object sender, EventArgs e)
         {
-            string tenTaiKhoan = txt_account.Text.Trim(); // Tên tài khoản từ TextBox
-            string matKhau = txt_password.Text.Trim(); // Mật khẩu từ TextBox
-
-            // Định nghĩa chuỗi kết nối
+            string tenTaiKhoan = txt_account.Text.Trim();
+            string matKhau = txt_password.Text.Trim();
             string connectionString = "Data Source=LAPTOP-G689TECS\\SQLEXPRESS;Initial Catalog=QuanLy_NhanVien;Integrated Security=True";
 
             using (SqlConnection conn = new SqlConnection(connectionString))
@@ -42,33 +40,25 @@ namespace doan
                     string query = "SELECT Ma_quyen_han FROM Tai_khoan WHERE Ten_tai_khoan = @tenTaiKhoan AND Mat_khau = @matKhau";
                     SqlCommand cmd = new SqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("@tenTaiKhoan", tenTaiKhoan);
-                    cmd.Parameters.AddWithValue("@matKhau", matKhau); // Sử dụng mật khẩu thô
+                    cmd.Parameters.AddWithValue("@matKhau", matKhau);
 
-                    // Lấy quyền hạn của tài khoản
                     var result = cmd.ExecuteScalar();
 
                     if (result != null)
                     {
                         int maQuyenHan = (int)result;
 
-                        // Mở form tương ứng dựa trên quyền hạn
-                        if (maQuyenHan == 1) // Admin
+                        if (maQuyenHan == 1 || maQuyenHan == 2) // Admin hoặc Quản lý
                         {
-                            FormQuanLy formQuanLy = new FormQuanLy();
+                            FormQuanLy formQuanLy = new FormQuanLy(maQuyenHan);
                             formQuanLy.Show();
-                            this.Hide(); // Ẩn form chính
-                        }
-                        else if (maQuyenHan == 2) // Quản lý
-                        {
-                            FormQuanLy formQuanLy = new FormQuanLy();
-                            formQuanLy.Show();
-                            this.Hide(); // Ẩn form chính
+                            this.Hide();
                         }
                         else if (maQuyenHan == 3) // Nhân viên
                         {
                             FormNhanVien formNhanVien = new FormNhanVien();
                             formNhanVien.Show();
-                            this.Hide(); // Ẩn form chính
+                            this.Hide();
                         }
                     }
                     else
@@ -83,7 +73,7 @@ namespace doan
             }
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+private void Form1_Load(object sender, EventArgs e)
         {
 
         }

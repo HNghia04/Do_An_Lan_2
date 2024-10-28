@@ -14,11 +14,18 @@ namespace doan
 {
     public partial class FormQuanLy : Form
     {
-        public FormQuanLy()
+        private int userRole;
+        public FormQuanLy(int maQuyenHan)
         {
             InitializeComponent();
+            userRole = maQuyenHan; // Gán mã quyền cho userRole
+            CheckPermissions(); // Gọi hàm kiểm tra quyền hạn
         }
-
+        private void CheckPermissions()
+        {
+            // Nếu là quản lý (maQuyenHan == 2) thì ẩn nút tài khoản
+            guna2Button6.Enabled = userRole != 2;
+        }
         private void bttthoat_Click(object sender, EventArgs e)
         {
             Form1 f = new Form1();
@@ -28,7 +35,6 @@ namespace doan
 
         private void FormQuanLy_Load(object sender, EventArgs e)
         {
-            // Chuỗi kết nối SQL Server của bạn
             string connectionString = "Data Source=LAPTOP-G689TECS\\SQLEXPRESS;Initial Catalog=QuanLy_NhanVien;Integrated Security=True";
             string query = @"
                 SELECT nv.Ho_va_ten, nv.Gioi_tinh, nv.So_dien_thoai, cv.Ten_chuc_vu, pb.Ten_phong_ban, nv.Ngay_bat_dau_lam_viec
@@ -43,8 +49,6 @@ namespace doan
                     SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
                     DataTable table = new DataTable();
                     adapter.Fill(table);
-
-                    // Hiển thị dữ liệu trong DataGridView
                     guna2DataGridView1.DataSource = table;
                 }
                 catch (Exception ex)
@@ -54,6 +58,12 @@ namespace doan
             }
         }
 
+        private void guna2Button6_Click(object sender, EventArgs e)
+        {
+            themtaikhoan f = new themtaikhoan();
+            f.Show();
+            this.Hide();
+        }
         private void guna2DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -93,13 +103,6 @@ namespace doan
                 adapter.Fill(dt);
                 guna2DataGridView1.DataSource = dt;
             }
-        }
-
-        private void guna2Button6_Click(object sender, EventArgs e)
-        {
-            themtaikhoan f = new themtaikhoan();
-            f.Show();
-            this.Hide();
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)

@@ -181,9 +181,9 @@ namespace doan.cac_form_quan_ly
 
         private void bttthoat_Click(object sender, EventArgs e)
         {
-            FormQuanLy f = new FormQuanLy();
-            f.Show();
-            this.Hide();
+            int maQuyenHan = 1; // Hoặc lấy từ tham số hoặc phương thức
+            FormQuanLy formQuanLy = new FormQuanLy(maQuyenHan);
+            formQuanLy.Show();
         }
         private void guna2DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
