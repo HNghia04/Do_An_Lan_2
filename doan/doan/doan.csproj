@@ -82,6 +82,12 @@
     <Compile Include="cac form quan ly\cacbangdon.Designer.cs">
       <DependentUpon>cacbangdon.cs</DependentUpon>
     </Compile>
+    <Compile Include="cac form quan ly\donthoiviec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cac form quan ly\donthoiviec.Designer.cs">
+      <DependentUpon>donthoiviec.cs</DependentUpon>
+    </Compile>
     <Compile Include="cac form quan ly\phucap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,6 +184,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="cac form quan ly\cacbangdon.resx">
       <DependentUpon>cacbangdon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cac form quan ly\donthoiviec.resx">
+      <DependentUpon>donthoiviec.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="cac form quan ly\phucap.resx">
       <DependentUpon>phucap.cs</DependentUpon>

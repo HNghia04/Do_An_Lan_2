@@ -190,5 +190,12 @@ namespace doan.cac_form_quan_ly
         {
 
         }
+
+        private void bttthoiviec_Click(object sender, EventArgs e)
+        {
+            donthoiviec f = new donthoiviec();
+            f.Show();
+            this.Hide();
+        }
     }
 }

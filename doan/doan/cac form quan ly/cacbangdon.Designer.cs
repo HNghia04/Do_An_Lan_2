@@ -82,6 +82,7 @@
             this.bttthoiviec.Size = new System.Drawing.Size(351, 115);
             this.bttthoiviec.TabIndex = 6;
             this.bttthoiviec.Text = "Đơn thôi việc";
+            this.bttthoiviec.Click += new System.EventHandler(this.bttthoiviec_Click);
             // 
             // guna2CircleButton1
             // 

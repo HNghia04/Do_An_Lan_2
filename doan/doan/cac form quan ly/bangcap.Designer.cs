@@ -79,7 +79,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(529, 50);
             this.label1.TabIndex = 10;
-            this.label1.Text = "Thêm bằng cấp";
+            this.label1.Text = "Thông tin bằng cấp";
             // 
             // dataGridView1
             // 
@@ -115,7 +115,7 @@
             this.groupBox1.Size = new System.Drawing.Size(1060, 1001);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Thông tin bằng cấp";
+            this.groupBox1.Text = "Thông tin đơn";
             // 
             // bttxoa
             // 
