@@ -33,22 +33,23 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtmabangcap = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtcosogiaoduc = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txttenbangcap = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.cbxhoten = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.dtpngaycapbang = new System.Windows.Forms.DateTimePicker();
-            this.txtchuyennganh = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txthangbang = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.bttxoa = new Guna.UI2.WinForms.Guna2Button();
             this.bttthem = new Guna.UI2.WinForms.Guna2Button();
+            this.txthangbang = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtchuyennganh = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.dtpngaycapbang = new System.Windows.Forms.DateTimePicker();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cbxhoten = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txttenbangcap = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtcosogiaoduc = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtmabangcap = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txttimkiem = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -116,205 +117,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin bằng cấp";
             // 
-            // txtmabangcap
-            // 
-            this.txtmabangcap.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtmabangcap.DefaultText = "";
-            this.txtmabangcap.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtmabangcap.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtmabangcap.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtmabangcap.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtmabangcap.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtmabangcap.Font = new System.Drawing.Font("Century Gothic", 11.14286F);
-            this.txtmabangcap.ForeColor = System.Drawing.Color.Black;
-            this.txtmabangcap.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtmabangcap.Location = new System.Drawing.Point(12, 98);
-            this.txtmabangcap.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtmabangcap.Name = "txtmabangcap";
-            this.txtmabangcap.PasswordChar = '\0';
-            this.txtmabangcap.PlaceholderText = "Nhập mã bằng";
-            this.txtmabangcap.SelectedText = "";
-            this.txtmabangcap.Size = new System.Drawing.Size(442, 56);
-            this.txtmabangcap.TabIndex = 8;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(6, 53);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(191, 33);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Mã bằng cấp";
-            // 
-            // txtcosogiaoduc
-            // 
-            this.txtcosogiaoduc.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtcosogiaoduc.DefaultText = "";
-            this.txtcosogiaoduc.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtcosogiaoduc.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtcosogiaoduc.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtcosogiaoduc.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtcosogiaoduc.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtcosogiaoduc.Font = new System.Drawing.Font("Century Gothic", 11.14286F);
-            this.txtcosogiaoduc.ForeColor = System.Drawing.Color.Black;
-            this.txtcosogiaoduc.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtcosogiaoduc.Location = new System.Drawing.Point(12, 492);
-            this.txtcosogiaoduc.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtcosogiaoduc.Name = "txtcosogiaoduc";
-            this.txtcosogiaoduc.PasswordChar = '\0';
-            this.txtcosogiaoduc.PlaceholderText = "Nhập tên cơ sở giáo dục";
-            this.txtcosogiaoduc.SelectedText = "";
-            this.txtcosogiaoduc.Size = new System.Drawing.Size(442, 56);
-            this.txtcosogiaoduc.TabIndex = 10;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 11.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(6, 447);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(259, 33);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Tên cơ sở giáo dục";
-            // 
-            // txttenbangcap
-            // 
-            this.txttenbangcap.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txttenbangcap.DefaultText = "";
-            this.txttenbangcap.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txttenbangcap.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txttenbangcap.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txttenbangcap.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txttenbangcap.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txttenbangcap.Font = new System.Drawing.Font("Century Gothic", 11.14286F);
-            this.txttenbangcap.ForeColor = System.Drawing.Color.Black;
-            this.txttenbangcap.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txttenbangcap.Location = new System.Drawing.Point(12, 236);
-            this.txttenbangcap.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txttenbangcap.Name = "txttenbangcap";
-            this.txttenbangcap.PasswordChar = '\0';
-            this.txttenbangcap.PlaceholderText = "Nhập tên bằng cấp";
-            this.txttenbangcap.SelectedText = "";
-            this.txttenbangcap.Size = new System.Drawing.Size(442, 56);
-            this.txttenbangcap.TabIndex = 12;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 11.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(6, 178);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(193, 33);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Tên bằng cấp";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 11.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(6, 320);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(142, 33);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "Họ và tên";
-            // 
-            // cbxhoten
-            // 
-            this.cbxhoten.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.cbxhoten.FormattingEnabled = true;
-            this.cbxhoten.Location = new System.Drawing.Point(12, 386);
-            this.cbxhoten.Name = "cbxhoten";
-            this.cbxhoten.Size = new System.Drawing.Size(442, 38);
-            this.cbxhoten.TabIndex = 14;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 11.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(6, 587);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(219, 33);
-            this.label6.TabIndex = 15;
-            this.label6.Text = "Ngày cấp bằng";
-            // 
-            // dtpngaycapbang
-            // 
-            this.dtpngaycapbang.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.dtpngaycapbang.Location = new System.Drawing.Point(12, 642);
-            this.dtpngaycapbang.Name = "dtpngaycapbang";
-            this.dtpngaycapbang.Size = new System.Drawing.Size(442, 37);
-            this.dtpngaycapbang.TabIndex = 16;
-            // 
-            // txtchuyennganh
-            // 
-            this.txtchuyennganh.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtchuyennganh.DefaultText = "";
-            this.txtchuyennganh.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtchuyennganh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtchuyennganh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtchuyennganh.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtchuyennganh.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtchuyennganh.Font = new System.Drawing.Font("Century Gothic", 11.14286F);
-            this.txtchuyennganh.ForeColor = System.Drawing.Color.Black;
-            this.txtchuyennganh.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtchuyennganh.Location = new System.Drawing.Point(12, 908);
-            this.txtchuyennganh.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtchuyennganh.Name = "txtchuyennganh";
-            this.txtchuyennganh.PasswordChar = '\0';
-            this.txtchuyennganh.PlaceholderText = "Nhập tên chuyên ngành";
-            this.txtchuyennganh.SelectedText = "";
-            this.txtchuyennganh.Size = new System.Drawing.Size(442, 56);
-            this.txtchuyennganh.TabIndex = 18;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 11.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(6, 842);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(209, 33);
-            this.label7.TabIndex = 17;
-            this.label7.Text = "Chuyên ngành";
-            // 
-            // txthangbang
-            // 
-            this.txthangbang.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txthangbang.DefaultText = "";
-            this.txthangbang.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txthangbang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txthangbang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txthangbang.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txthangbang.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txthangbang.Font = new System.Drawing.Font("Century Gothic", 11.14286F);
-            this.txthangbang.ForeColor = System.Drawing.Color.Black;
-            this.txthangbang.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txthangbang.Location = new System.Drawing.Point(12, 756);
-            this.txthangbang.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txthangbang.Name = "txthangbang";
-            this.txthangbang.PasswordChar = '\0';
-            this.txthangbang.PlaceholderText = "Nhập hạng bằng";
-            this.txthangbang.SelectedText = "";
-            this.txthangbang.Size = new System.Drawing.Size(442, 56);
-            this.txthangbang.TabIndex = 20;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 11.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(6, 703);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(158, 33);
-            this.label8.TabIndex = 19;
-            this.label8.Text = "Hạng bằng";
-            // 
             // bttxoa
             // 
             this.bttxoa.BackColor = System.Drawing.SystemColors.Control;
@@ -357,11 +159,220 @@
             this.bttthem.Text = "Thêm thông tin";
             this.bttthem.Click += new System.EventHandler(this.bttthem_Click);
             // 
+            // txthangbang
+            // 
+            this.txthangbang.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txthangbang.DefaultText = "";
+            this.txthangbang.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txthangbang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txthangbang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txthangbang.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txthangbang.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txthangbang.Font = new System.Drawing.Font("Century Gothic", 11.14286F);
+            this.txthangbang.ForeColor = System.Drawing.Color.Black;
+            this.txthangbang.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txthangbang.Location = new System.Drawing.Point(12, 756);
+            this.txthangbang.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txthangbang.Name = "txthangbang";
+            this.txthangbang.PasswordChar = '\0';
+            this.txthangbang.PlaceholderText = "Nhập hạng bằng";
+            this.txthangbang.SelectedText = "";
+            this.txthangbang.Size = new System.Drawing.Size(442, 56);
+            this.txthangbang.TabIndex = 20;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 11.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(6, 703);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(158, 33);
+            this.label8.TabIndex = 19;
+            this.label8.Text = "Hạng bằng";
+            // 
+            // txtchuyennganh
+            // 
+            this.txtchuyennganh.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtchuyennganh.DefaultText = "";
+            this.txtchuyennganh.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtchuyennganh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtchuyennganh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtchuyennganh.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtchuyennganh.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtchuyennganh.Font = new System.Drawing.Font("Century Gothic", 11.14286F);
+            this.txtchuyennganh.ForeColor = System.Drawing.Color.Black;
+            this.txtchuyennganh.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtchuyennganh.Location = new System.Drawing.Point(12, 908);
+            this.txtchuyennganh.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtchuyennganh.Name = "txtchuyennganh";
+            this.txtchuyennganh.PasswordChar = '\0';
+            this.txtchuyennganh.PlaceholderText = "Nhập tên chuyên ngành";
+            this.txtchuyennganh.SelectedText = "";
+            this.txtchuyennganh.Size = new System.Drawing.Size(442, 56);
+            this.txtchuyennganh.TabIndex = 18;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 11.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(6, 842);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(209, 33);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "Chuyên ngành";
+            // 
+            // dtpngaycapbang
+            // 
+            this.dtpngaycapbang.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.dtpngaycapbang.Location = new System.Drawing.Point(12, 642);
+            this.dtpngaycapbang.Name = "dtpngaycapbang";
+            this.dtpngaycapbang.Size = new System.Drawing.Size(442, 37);
+            this.dtpngaycapbang.TabIndex = 16;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 11.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(6, 587);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(219, 33);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Ngày cấp bằng";
+            // 
+            // cbxhoten
+            // 
+            this.cbxhoten.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.cbxhoten.FormattingEnabled = true;
+            this.cbxhoten.Location = new System.Drawing.Point(12, 386);
+            this.cbxhoten.Name = "cbxhoten";
+            this.cbxhoten.Size = new System.Drawing.Size(442, 38);
+            this.cbxhoten.TabIndex = 14;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 11.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(6, 320);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(142, 33);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Họ và tên";
+            // 
+            // txttenbangcap
+            // 
+            this.txttenbangcap.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txttenbangcap.DefaultText = "";
+            this.txttenbangcap.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txttenbangcap.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txttenbangcap.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txttenbangcap.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txttenbangcap.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txttenbangcap.Font = new System.Drawing.Font("Century Gothic", 11.14286F);
+            this.txttenbangcap.ForeColor = System.Drawing.Color.Black;
+            this.txttenbangcap.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txttenbangcap.Location = new System.Drawing.Point(12, 236);
+            this.txttenbangcap.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txttenbangcap.Name = "txttenbangcap";
+            this.txttenbangcap.PasswordChar = '\0';
+            this.txttenbangcap.PlaceholderText = "Nhập tên bằng cấp";
+            this.txttenbangcap.SelectedText = "";
+            this.txttenbangcap.Size = new System.Drawing.Size(442, 56);
+            this.txttenbangcap.TabIndex = 12;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 11.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(6, 178);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(193, 33);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Tên bằng cấp";
+            // 
+            // txtcosogiaoduc
+            // 
+            this.txtcosogiaoduc.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtcosogiaoduc.DefaultText = "";
+            this.txtcosogiaoduc.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtcosogiaoduc.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtcosogiaoduc.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtcosogiaoduc.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtcosogiaoduc.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtcosogiaoduc.Font = new System.Drawing.Font("Century Gothic", 11.14286F);
+            this.txtcosogiaoduc.ForeColor = System.Drawing.Color.Black;
+            this.txtcosogiaoduc.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtcosogiaoduc.Location = new System.Drawing.Point(12, 492);
+            this.txtcosogiaoduc.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtcosogiaoduc.Name = "txtcosogiaoduc";
+            this.txtcosogiaoduc.PasswordChar = '\0';
+            this.txtcosogiaoduc.PlaceholderText = "Nhập tên cơ sở giáo dục";
+            this.txtcosogiaoduc.SelectedText = "";
+            this.txtcosogiaoduc.Size = new System.Drawing.Size(442, 56);
+            this.txtcosogiaoduc.TabIndex = 10;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 11.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(6, 447);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(259, 33);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Tên cơ sở giáo dục";
+            // 
+            // txtmabangcap
+            // 
+            this.txtmabangcap.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtmabangcap.DefaultText = "";
+            this.txtmabangcap.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtmabangcap.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtmabangcap.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtmabangcap.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtmabangcap.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtmabangcap.Font = new System.Drawing.Font("Century Gothic", 11.14286F);
+            this.txtmabangcap.ForeColor = System.Drawing.Color.Black;
+            this.txtmabangcap.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtmabangcap.Location = new System.Drawing.Point(12, 98);
+            this.txtmabangcap.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtmabangcap.Name = "txtmabangcap";
+            this.txtmabangcap.PasswordChar = '\0';
+            this.txtmabangcap.PlaceholderText = "Nhập mã bằng";
+            this.txtmabangcap.SelectedText = "";
+            this.txtmabangcap.Size = new System.Drawing.Size(442, 56);
+            this.txtmabangcap.TabIndex = 8;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(6, 53);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(191, 33);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Mã bằng cấp";
+            // 
+            // txttimkiem
+            // 
+            this.txttimkiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.85714F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txttimkiem.Location = new System.Drawing.Point(1798, 59);
+            this.txttimkiem.Name = "txttimkiem";
+            this.txttimkiem.Size = new System.Drawing.Size(332, 49);
+            this.txttimkiem.TabIndex = 14;
+            this.txttimkiem.TextChanged += new System.EventHandler(this.txttimkiem_TextChanged);
+            // 
             // bangcap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(2142, 1127);
+            this.Controls.Add(this.txttimkiem);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.guna2CircleButton1);
@@ -373,6 +384,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -398,5 +410,6 @@
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2Button bttxoa;
         private Guna.UI2.WinForms.Guna2Button bttthem;
+        private System.Windows.Forms.TextBox txttimkiem;
     }
 }

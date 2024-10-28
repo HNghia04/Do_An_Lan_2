@@ -267,5 +267,52 @@ namespace doan.cac_form_quan_ly
                 MessageBox.Show("Vui lòng chọn hàng cần xóa.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void txttimkiem_TextChanged(object sender, EventArgs e)
+        {
+            // Lấy từ khóa tìm kiếm từ txttimkiem
+            string searchKeyword = txttimkiem.Text;
+
+            // Kết nối đến cơ sở dữ liệu
+            string connectionString = "Data Source=LAPTOP-G689TECS\\SQLEXPRESS;Initial Catalog=QuanLy_NhanVien;Integrated Security=True"; // Thay đổi thành chuỗi kết nối của bạn
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    // Câu truy vấn lấy dữ liệu từ bảng BangCap và tên nhân viên từ bảng NhanVien với điều kiện tìm kiếm
+                    string query = @"
+            SELECT 
+                b.Ma_bang_cap, 
+                n.Ho_va_ten, 
+                b.Ten_bang_cap, 
+                b.Ten_co_so_giao_duc, 
+                b.Ngay_cap_bang, 
+                b.Hang_bang, 
+                b.Chuyen_nganh_dao_tao 
+            FROM 
+                Bang_cap b 
+            INNER JOIN 
+                Nhan_vien n ON b.Ma_nhan_vien = n.Ma_nhan_vien
+            WHERE
+                n.Ho_va_ten LIKE @SearchKeyword OR 
+                b.Ten_bang_cap LIKE @SearchKeyword"; // Điều chỉnh thêm các điều kiện tìm kiếm khác nếu cần
+
+                    SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
+                    adapter.SelectCommand.Parameters.AddWithValue("@SearchKeyword", "%" + searchKeyword + "%"); // Thêm tham số tìm kiếm
+
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+
+                    // Thiết lập DataSource cho DataGridView
+                    dataGridView1.DataSource = dataTable;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi khi tải dữ liệu: " + ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
     }
 }
