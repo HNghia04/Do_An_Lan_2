@@ -14,6 +14,7 @@ namespace doan.cac_form_quan_ly
             LoadBangCapData();
             LoadDonXinThoiViecData();
             LoadHopDongData();
+            LoadDonNghiPhepData();
         }
 
         private void LoadBangCapData()
@@ -196,6 +197,79 @@ namespace doan.cac_form_quan_ly
             donthoiviec f = new donthoiviec();
             f.Show();
             this.Hide();
+        }
+
+        private void dataGridView4_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+        private void LoadDonNghiPhepData()
+        {
+            string connectionString = "Data Source=LAPTOP-G689TECS\\SQLEXPRESS;Initial Catalog=QuanLy_NhanVien;Integrated Security=True";
+            string query = @"
+        SELECT 
+            Nghi_phep.Ma_nghi_phep AS [Mã Nghỉ Phép],
+            Nhan_vien.Ho_va_ten AS [Tên Nhân Viên],
+            Nghi_phep.Ngay_bat_dau_nghi AS [Ngày Bắt Đầu],
+            Nghi_phep.Ngay_ket_thuc_nghi AS [Ngày Kết Thúc],
+            Nghi_phep.Trang_thai AS [Trạng Thái]
+        FROM 
+            Nghi_phep
+        JOIN 
+            Nhan_vien ON Nghi_phep.Ma_nhan_vien = Nhan_vien.Ma_nhan_vien
+        ORDER BY 
+            CASE WHEN Nghi_phep.Trang_thai = N'Chờ duyệt' THEN 0 ELSE 1 END,
+            Nghi_phep.Ngay_bat_dau_nghi DESC";
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    SqlDataAdapter dataAdapter = new SqlDataAdapter(query, conn);
+                    DataTable dataTable = new DataTable();
+                    dataAdapter.Fill(dataTable);
+
+                    dataGridView4.DataSource = dataTable;
+
+                    // Đăng ký sự kiện CellFormatting và CellValueChanged
+                    dataGridView4.CellFormatting += dataGridView4_CellFormatting;
+                    dataGridView4.CellValueChanged += dataGridView4_CellValueChanged;
+                    dataGridView4.CurrentCellDirtyStateChanged += dataGridView4_CurrentCellDirtyStateChanged;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi: " + ex.Message);
+                }
+            }
+        }
+        private void dataGridView4_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            // Kiểm tra nếu cột hiện tại là cột "Trạng Thái"
+            if (dataGridView4.Columns[e.ColumnIndex].Name == "Trạng Thái")
+            {
+                if (e.Value != null && e.Value.ToString() == "Chờ duyệt")
+                {
+                    // Tô màu đỏ cho hàng có trạng thái "Chờ duyệt"
+                    dataGridView4.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.Red;
+                    dataGridView4.Rows[e.RowIndex].DefaultCellStyle.ForeColor = Color.White;
+                }
+            }
+        }
+
+        private void dataGridView4_CurrentCellDirtyStateChanged(object sender, EventArgs e)
+        {
+            if (dataGridView4.IsCurrentCellDirty)
+            {
+                dataGridView4.CommitEdit(DataGridViewDataErrorContexts.Commit);
+            }
+        }
+
+        private void dataGridView4_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex == dataGridView4.Columns["Trạng Thái"].Index)
+            {
+                dataGridView4.InvalidateRow(e.RowIndex);
+            }
         }
     }
 }

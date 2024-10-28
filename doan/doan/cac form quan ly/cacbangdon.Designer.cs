@@ -39,11 +39,14 @@
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             this.SuspendLayout();
             // 
             // bttthoat
@@ -77,7 +80,7 @@
             this.bttthoiviec.ForeColor = System.Drawing.Color.White;
             this.bttthoiviec.Image = ((System.Drawing.Image)(resources.GetObject("bttthoiviec.Image")));
             this.bttthoiviec.ImageSize = new System.Drawing.Size(60, 60);
-            this.bttthoiviec.Location = new System.Drawing.Point(933, 23);
+            this.bttthoiviec.Location = new System.Drawing.Point(677, 23);
             this.bttthoiviec.Name = "bttthoiviec";
             this.bttthoiviec.Size = new System.Drawing.Size(351, 115);
             this.bttthoiviec.TabIndex = 6;
@@ -114,7 +117,7 @@
             this.btthopdong.ForeColor = System.Drawing.Color.White;
             this.btthopdong.Image = ((System.Drawing.Image)(resources.GetObject("btthopdong.Image")));
             this.btthopdong.ImageSize = new System.Drawing.Size(60, 60);
-            this.btthopdong.Location = new System.Drawing.Point(1703, 23);
+            this.btthopdong.Location = new System.Drawing.Point(1200, 23);
             this.btthopdong.Name = "btthopdong";
             this.btthopdong.Size = new System.Drawing.Size(351, 115);
             this.btthopdong.TabIndex = 3;
@@ -133,7 +136,7 @@
             this.bttbangcap.ForeColor = System.Drawing.Color.White;
             this.bttbangcap.Image = ((System.Drawing.Image)(resources.GetObject("bttbangcap.Image")));
             this.bttbangcap.ImageSize = new System.Drawing.Size(60, 60);
-            this.bttbangcap.Location = new System.Drawing.Point(214, 23);
+            this.bttbangcap.Location = new System.Drawing.Point(95, 23);
             this.bttbangcap.Name = "bttbangcap";
             this.bttbangcap.Size = new System.Drawing.Size(351, 115);
             this.bttbangcap.TabIndex = 3;
@@ -142,6 +145,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.guna2Button1);
             this.panel1.Controls.Add(this.bttbangcap);
             this.panel1.Controls.Add(this.bttthoiviec);
             this.panel1.Controls.Add(this.btthopdong);
@@ -153,6 +157,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.Control;
+            this.panel2.Controls.Add(this.dataGridView4);
             this.panel2.Controls.Add(this.dataGridView3);
             this.panel2.Controls.Add(this.dataGridView2);
             this.panel2.Controls.Add(this.dataGridView1);
@@ -164,23 +169,23 @@
             // dataGridView3
             // 
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(1540, 91);
+            this.dataGridView3.Location = new System.Drawing.Point(1132, 62);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.ReadOnly = true;
             this.dataGridView3.RowHeadersWidth = 72;
             this.dataGridView3.RowTemplate.Height = 31;
-            this.dataGridView3.Size = new System.Drawing.Size(697, 794);
+            this.dataGridView3.Size = new System.Drawing.Size(499, 794);
             this.dataGridView3.TabIndex = 2;
             // 
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(786, 91);
+            this.dataGridView2.Location = new System.Drawing.Point(581, 62);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.RowHeadersWidth = 72;
             this.dataGridView2.RowTemplate.Height = 31;
-            this.dataGridView2.Size = new System.Drawing.Size(686, 794);
+            this.dataGridView2.Size = new System.Drawing.Size(488, 794);
             this.dataGridView2.TabIndex = 1;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             this.dataGridView2.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView2_CellFormatting);
@@ -188,14 +193,45 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(41, 91);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 62);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 72;
             this.dataGridView1.RowTemplate.Height = 31;
-            this.dataGridView1.Size = new System.Drawing.Size(674, 794);
+            this.dataGridView1.Size = new System.Drawing.Size(516, 794);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.BackColor = System.Drawing.SystemColors.Control;
+            this.guna2Button1.BorderRadius = 18;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.MediumPurple;
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
+            this.guna2Button1.ImageSize = new System.Drawing.Size(60, 60);
+            this.guna2Button1.Location = new System.Drawing.Point(1784, 23);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(351, 115);
+            this.guna2Button1.TabIndex = 7;
+            this.guna2Button1.Text = "Nghỉ phép";
+            // 
+            // dataGridView4
+            // 
+            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView4.Location = new System.Drawing.Point(1702, 62);
+            this.dataGridView4.Name = "dataGridView4";
+            this.dataGridView4.ReadOnly = true;
+            this.dataGridView4.RowHeadersWidth = 72;
+            this.dataGridView4.RowTemplate.Height = 31;
+            this.dataGridView4.Size = new System.Drawing.Size(499, 794);
+            this.dataGridView4.TabIndex = 3;
+            this.dataGridView4.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView4_CellContentClick);
             // 
             // cacbangdon
             // 
@@ -214,6 +250,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -230,5 +267,7 @@
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private System.Windows.Forms.DataGridView dataGridView4;
     }
 }

@@ -148,7 +148,7 @@
   <data name="bttthoiviec.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DQAACw0B7QfALAAACTxJREFUeF7tXWtsHFcVDhXiIR7iT8kPnN2d8ca7ntn12vHGr9jxI7FdrzeJYzvF
+        DAAACwwBP0AiyAAACTxJREFUeF7tXWtsHFcVDhXiIR7iT8kPnN2d8ca7ntn12vHGr9jxI7FdrzeJYzvF
         TkISN+RF2jwaKFRAUYqQEBEFlVb8aBDvkqZKSwBBEbRVBUVQEI9KUAjwDxUV1BdUqCDRy/nu3rveDHed
         ze7MZtY+n/RpN2fm3nvOd/Y+5s54sorBYDAYDAaDwWAwGAwGg8Fg+Afbbntn1HI+HrHcX9HnK1HLFZXR
         eYXK/BJl4/H261V1jFoQsZzZSMz9h1nwykl1vBy13WlVLaMaIBkk5mtS1JjzrWjUHVq9uu0t6vAVgXOp
@@ -193,7 +193,7 @@
   <data name="guna2CircleButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DQAACw0B7QfALAAABQZJREFUaEPt2NlTW1UcB/BrgUKxZUlCIRCQzdIWUBbr6J/g+NzR0WftdHSc8alO
+        DAAACwwBP0AiyAAABQZJREFUaEPt2NlTW1UcB/BrgUKxZUlCIRCQzdIWUBbr6J/g+NzR0WftdHSc8alO
         X5hRlmodKluBQguUtmCQWMuiLKVI9pUmJJACBQkEm4QbamccSav9eQ6eVGsbbpJ7SV7yncnwxL2fc/K7
         9/zyoyKJJBL2OS6GqFIT/WaxceN0scHVX6x3Wgq1DnehxvHwqOrewyOqe+7DinVzgdzeXzBlP50vXX2D
         AthD/j18eW2GziyZcZ8pMdFrrxppeGV6A9ACoEjnhCKtEwrVDkALgCOKX+GwfB0KpOtwaMoOL0+uQd6E
@@ -253,6 +253,35 @@
         dIvhL1eHK84YzDbskJ7VpHo+GbUikGn70Q605PZgsroI3qoitBxwo73gufSsJtXzsdR9BtcHO2elys5q
         Uj0fS60/kCkCOT7c/V2q7Kyq+AC8f3CsxVLnzxMGMu+JcJ02W39IlZ1Vx4sv7RDVbw7acuYgk97e/HQc
         nMeKuXPuFelnenvz48hfCLzIXzxdXo4tquprh21h457zCBH0EhX1FxXDsRZVZ0RFAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="guna2Button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        jq5+AAAAAElFTkSuQmCC
 </value>
   </data>
 </root>
