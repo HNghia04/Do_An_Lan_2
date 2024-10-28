@@ -56,18 +56,21 @@ namespace doan.cac_form_quan_ly
         {
             string connectionString = "Data Source=LAPTOP-G689TECS\\SQLEXPRESS;Initial Catalog=QuanLy_NhanVien;Integrated Security=True";
             string query = @"
-        SELECT 
-            Don_xin_thoi_viec.Ma_don_xin_thoi_viec AS [Mã Đơn],
-            Nhan_vien.Ho_va_ten AS [Tên Nhân Viên],
-            Nhan_vien.ten_chuc_vu AS [Chức Vụ],
-            Don_xin_thoi_viec.Ngay_nop_don AS [Ngày Nộp Đơn],
-            Don_xin_thoi_viec.Ngay_du_kien_thoi_viec AS [Ngày Dự Kiến Thôi Việc],
-            Don_xin_thoi_viec.Ly_do AS [Lý Do],
-            Don_xin_thoi_viec.Trang_thai AS [Trạng Thái]
-        FROM 
-            Don_xin_thoi_viec
-        JOIN 
-            Nhan_vien ON Don_xin_thoi_viec.Ma_nhan_vien = Nhan_vien.Ma_nhan_vien";
+    SELECT 
+        Don_xin_thoi_viec.Ma_don_xin_thoi_viec AS [Mã Đơn],
+        Nhan_vien.Ho_va_ten AS [Tên Nhân Viên],
+        Nhan_vien.ten_chuc_vu AS [Chức Vụ],
+        Don_xin_thoi_viec.Ngay_nop_don AS [Ngày Nộp Đơn],
+        Don_xin_thoi_viec.Ngay_du_kien_thoi_viec AS [Ngày Dự Kiến Thôi Việc],
+        Don_xin_thoi_viec.Ly_do AS [Lý Do],
+        Don_xin_thoi_viec.Trang_thai AS [Trạng Thái]
+    FROM 
+        Don_xin_thoi_viec
+    JOIN 
+        Nhan_vien ON Don_xin_thoi_viec.Ma_nhan_vien = Nhan_vien.Ma_nhan_vien
+    ORDER BY 
+        CASE WHEN Don_xin_thoi_viec.Trang_thai = N'Chờ duyệt' THEN 0 ELSE 1 END, 
+        Don_xin_thoi_viec.Ngay_nop_don DESC";
 
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
@@ -78,6 +81,9 @@ namespace doan.cac_form_quan_ly
                     dataAdapter.Fill(dataTable);
 
                     dataGridView2.DataSource = dataTable;
+
+                    // Đăng ký sự kiện CellFormatting để tô màu cho các đơn chờ duyệt
+                    dataGridView2.CellFormatting += dataGridView2_CellFormatting;
                 }
                 catch (Exception ex)
                 {
@@ -131,6 +137,32 @@ namespace doan.cac_form_quan_ly
         private void txttimkiem_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void dataGridView2_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            // Kiểm tra nếu cột hiện tại là cột "Trạng Thái"
+            if (dataGridView2.Columns[e.ColumnIndex].Name == "Trạng Thái")
+            {
+                if (e.Value != null && e.Value.ToString() == "Chờ duyệt")
+                {
+                    // Tô màu đỏ cho hàng có trạng thái "Chờ duyệt"
+                    dataGridView2.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.Red;
+                    dataGridView2.Rows[e.RowIndex].DefaultCellStyle.ForeColor = Color.White;
+                }
+            }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void bttbangcap_Click(object sender, EventArgs e)
+        {
+            bangcap f = new bangcap();
+            f.Show();
+            this.Hide();
         }
     }
 }

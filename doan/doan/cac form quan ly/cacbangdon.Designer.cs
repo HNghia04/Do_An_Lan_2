@@ -137,6 +137,7 @@
             this.bttbangcap.Size = new System.Drawing.Size(351, 115);
             this.bttbangcap.TabIndex = 3;
             this.bttbangcap.Text = "Bằng cấp";
+            this.bttbangcap.Click += new System.EventHandler(this.bttbangcap_Click);
             // 
             // panel1
             // 
@@ -180,6 +181,7 @@
             this.dataGridView2.RowTemplate.Height = 31;
             this.dataGridView2.Size = new System.Drawing.Size(686, 794);
             this.dataGridView2.TabIndex = 1;
+            this.dataGridView2.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView2_CellFormatting);
             // 
             // dataGridView1
             // 
@@ -191,6 +193,7 @@
             this.dataGridView1.RowTemplate.Height = 31;
             this.dataGridView1.Size = new System.Drawing.Size(674, 794);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // cacbangdon
             // 
