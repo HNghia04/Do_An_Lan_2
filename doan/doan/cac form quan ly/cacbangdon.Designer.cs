@@ -246,6 +246,7 @@
             this.Controls.Add(this.guna2CircleButton1);
             this.Name = "cacbangdon";
             this.Text = "Bảng đơn";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.cacbangdon_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

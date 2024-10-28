@@ -359,6 +359,7 @@
             this.Controls.Add(this.label1);
             this.Name = "donthoiviec";
             this.Text = "donthoiviec";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.donthoiviec_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

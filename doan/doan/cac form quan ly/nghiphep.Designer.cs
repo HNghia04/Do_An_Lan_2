@@ -310,6 +310,7 @@
             this.Controls.Add(this.label1);
             this.Name = "nghiphep";
             this.Text = "nghiphep";
+            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.Load += new System.EventHandler(this.nghiphep_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);

@@ -37,10 +37,15 @@ namespace doan
         {
             string connectionString = "Data Source=LAPTOP-G689TECS\\SQLEXPRESS;Initial Catalog=QuanLy_NhanVien;Integrated Security=True";
             string query = @"
-                SELECT nv.Ho_va_ten, nv.Gioi_tinh, nv.So_dien_thoai, cv.Ten_chuc_vu, pb.Ten_phong_ban, nv.Ngay_bat_dau_lam_viec
-                FROM Nhan_vien nv
-                JOIN Chuc_vu cv ON nv.Ma_chuc_vu = cv.Ma_chuc_vu
-                JOIN Phong_ban pb ON nv.Ma_phong_ban = pb.Ma_phong_ban;";
+        SELECT 
+            cc.Ma_cham_cong,
+            nv.Ho_va_ten AS 'Họ tên',
+            CONVERT(varchar, cc.Ngay_lam_viec, 103) AS 'Ngày làm việc', 
+            cc.So_gio_lam_viec_trong_ngay AS 'Số giờ làm việc'
+        FROM 
+            Cham_cong cc
+        JOIN 
+            Nhan_vien nv ON cc.Ma_nhan_vien = nv.Ma_nhan_vien;";
 
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
@@ -72,27 +77,19 @@ namespace doan
         private void txttimkiem_TextChanged(object sender, EventArgs e)
         {
             string tuKhoa = txttimkiem.Text.Trim();
-            string query = $@"
-    SELECT 
-        Nhan_vien.Ho_va_ten AS 'Họ tên',
-        Nhan_vien.Gioi_tinh AS 'Giới tính',
-        Nhan_vien.So_dien_thoai AS 'Số điện thoại',
-        Chuc_vu.Ten_chuc_vu AS 'Chức vụ',
-        Phong_ban.Ten_phong_ban AS 'Phòng ban',
-        Nhan_vien.Ngay_bat_dau_lam_viec AS 'Ngày bắt đầu làm việc'
-    FROM 
-        Nhan_vien
-    JOIN 
-        Chuc_vu ON Nhan_vien.Ma_chuc_vu = Chuc_vu.Ma_chuc_vu
-    JOIN 
-        Phong_ban ON Nhan_vien.Ma_phong_ban = Phong_ban.Ma_phong_ban
-    WHERE 
-        Nhan_vien.Ho_va_ten LIKE '%' + @tuKhoa + '%' 
-        OR Nhan_vien.So_dien_thoai LIKE '%' + @tuKhoa + '%'
-        OR Chuc_vu.Ten_chuc_vu LIKE '%' + @tuKhoa + '%'
-        OR Phong_ban.Ten_phong_ban LIKE '%' + @tuKhoa + '%'
-        OR Nhan_vien.Gioi_tinh = @tuKhoa;
-    ";
+            string query = @"
+        SELECT 
+            cc.MaChamCong,
+            nv.Ho_va_ten AS 'Họ tên',
+            CONVERT(varchar, cc.NgayLamViec, 103) AS 'Ngày làm việc', 
+            cc.SoGioLamViec AS 'Số giờ làm việc'
+        FROM 
+            ChamCong cc
+        JOIN 
+            Nhan_vien nv ON cc.MaNhanVien = nv.MaNhanVien
+        WHERE 
+            nv.Ho_va_ten LIKE '%' + @tuKhoa + '%' 
+            OR cc.MaChamCong LIKE '%' + @tuKhoa + '%';";
 
             // Thực hiện truy vấn và cập nhật DataGridView
             using (SqlConnection conn = new SqlConnection("Data Source=LAPTOP-G689TECS\\SQLEXPRESS;Initial Catalog=QuanLy_NhanVien;Integrated Security=True"))
@@ -104,6 +101,7 @@ namespace doan
                 guna2DataGridView1.DataSource = dt;
             }
         }
+
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {

@@ -32,6 +32,9 @@
             this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbxphucap = new System.Windows.Forms.ComboBox();
+            this.cbxluongcoban = new System.Windows.Forms.ComboBox();
+            this.cbxtennhanvien = new System.Windows.Forms.ComboBox();
             this.bttxoa = new Guna.UI2.WinForms.Guna2Button();
             this.bttthem = new Guna.UI2.WinForms.Guna2Button();
             this.txtluongthucnhan = new Guna.UI2.WinForms.Guna2TextBox();
@@ -43,9 +46,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtmabangluong = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.cbxtennhanvien = new System.Windows.Forms.ComboBox();
-            this.cbxluongcoban = new System.Windows.Forms.ComboBox();
-            this.cbxphucap = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.txttimkiem = new Guna.UI2.WinForms.Guna2TextBox();
             this.groupBox1.SuspendLayout();
@@ -102,6 +102,36 @@
             this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin lương";
+            // 
+            // cbxphucap
+            // 
+            this.cbxphucap.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.cbxphucap.FormattingEnabled = true;
+            this.cbxphucap.Location = new System.Drawing.Point(12, 638);
+            this.cbxphucap.Name = "cbxphucap";
+            this.cbxphucap.Size = new System.Drawing.Size(442, 38);
+            this.cbxphucap.TabIndex = 26;
+            this.cbxphucap.SelectedIndexChanged += new System.EventHandler(this.cbxphucap_SelectedIndexChanged);
+            // 
+            // cbxluongcoban
+            // 
+            this.cbxluongcoban.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.cbxluongcoban.FormattingEnabled = true;
+            this.cbxluongcoban.Location = new System.Drawing.Point(12, 519);
+            this.cbxluongcoban.Name = "cbxluongcoban";
+            this.cbxluongcoban.Size = new System.Drawing.Size(442, 38);
+            this.cbxluongcoban.TabIndex = 25;
+            this.cbxluongcoban.SelectedIndexChanged += new System.EventHandler(this.cbxluongcoban_SelectedIndexChanged);
+            // 
+            // cbxtennhanvien
+            // 
+            this.cbxtennhanvien.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.cbxtennhanvien.FormattingEnabled = true;
+            this.cbxtennhanvien.Location = new System.Drawing.Point(12, 244);
+            this.cbxtennhanvien.Name = "cbxtennhanvien";
+            this.cbxtennhanvien.Size = new System.Drawing.Size(442, 38);
+            this.cbxtennhanvien.TabIndex = 24;
+            this.cbxtennhanvien.SelectedIndexChanged += new System.EventHandler(this.cbxtennhanvien_SelectedIndexChanged);
             // 
             // bttxoa
             // 
@@ -263,36 +293,6 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "Mã bảng lương";
             // 
-            // cbxtennhanvien
-            // 
-            this.cbxtennhanvien.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.cbxtennhanvien.FormattingEnabled = true;
-            this.cbxtennhanvien.Location = new System.Drawing.Point(12, 244);
-            this.cbxtennhanvien.Name = "cbxtennhanvien";
-            this.cbxtennhanvien.Size = new System.Drawing.Size(442, 38);
-            this.cbxtennhanvien.TabIndex = 24;
-            this.cbxtennhanvien.SelectedIndexChanged += new System.EventHandler(this.cbxtennhanvien_SelectedIndexChanged);
-            // 
-            // cbxluongcoban
-            // 
-            this.cbxluongcoban.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.cbxluongcoban.FormattingEnabled = true;
-            this.cbxluongcoban.Location = new System.Drawing.Point(12, 519);
-            this.cbxluongcoban.Name = "cbxluongcoban";
-            this.cbxluongcoban.Size = new System.Drawing.Size(442, 38);
-            this.cbxluongcoban.TabIndex = 25;
-            this.cbxluongcoban.SelectedIndexChanged += new System.EventHandler(this.cbxluongcoban_SelectedIndexChanged);
-            // 
-            // cbxphucap
-            // 
-            this.cbxphucap.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.cbxphucap.FormattingEnabled = true;
-            this.cbxphucap.Location = new System.Drawing.Point(12, 638);
-            this.cbxphucap.Name = "cbxphucap";
-            this.cbxphucap.Size = new System.Drawing.Size(442, 38);
-            this.cbxphucap.TabIndex = 26;
-            this.cbxphucap.SelectedIndexChanged += new System.EventHandler(this.cbxphucap_SelectedIndexChanged);
-            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -339,6 +339,7 @@
             this.Controls.Add(this.label1);
             this.Name = "bangluong";
             this.Text = "bangluong";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.bangluong_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
