@@ -271,5 +271,12 @@ namespace doan.cac_form_quan_ly
                 dataGridView4.InvalidateRow(e.RowIndex);
             }
         }
+
+        private void bttnghiphep_Click(object sender, EventArgs e)
+        {
+            nghiphep f = new nghiphep();
+            f.Show();
+            this.Hide();
+        }
     }
 }

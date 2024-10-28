@@ -39,7 +39,7 @@
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.bttnghiphep = new Guna.UI2.WinForms.Guna2Button();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -145,7 +145,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.guna2Button1);
+            this.panel1.Controls.Add(this.bttnghiphep);
             this.panel1.Controls.Add(this.bttbangcap);
             this.panel1.Controls.Add(this.bttthoiviec);
             this.panel1.Controls.Add(this.btthopdong);
@@ -202,24 +202,25 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // guna2Button1
+            // bttnghiphep
             // 
-            this.guna2Button1.BackColor = System.Drawing.SystemColors.Control;
-            this.guna2Button1.BorderRadius = 18;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.MediumPurple;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
-            this.guna2Button1.ImageSize = new System.Drawing.Size(60, 60);
-            this.guna2Button1.Location = new System.Drawing.Point(1784, 23);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(351, 115);
-            this.guna2Button1.TabIndex = 7;
-            this.guna2Button1.Text = "Nghỉ phép";
+            this.bttnghiphep.BackColor = System.Drawing.SystemColors.Control;
+            this.bttnghiphep.BorderRadius = 18;
+            this.bttnghiphep.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.bttnghiphep.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.bttnghiphep.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.bttnghiphep.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.bttnghiphep.FillColor = System.Drawing.Color.MediumPurple;
+            this.bttnghiphep.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.bttnghiphep.ForeColor = System.Drawing.Color.White;
+            this.bttnghiphep.Image = ((System.Drawing.Image)(resources.GetObject("bttnghiphep.Image")));
+            this.bttnghiphep.ImageSize = new System.Drawing.Size(60, 60);
+            this.bttnghiphep.Location = new System.Drawing.Point(1784, 23);
+            this.bttnghiphep.Name = "bttnghiphep";
+            this.bttnghiphep.Size = new System.Drawing.Size(351, 115);
+            this.bttnghiphep.TabIndex = 7;
+            this.bttnghiphep.Text = "Nghỉ phép";
+            this.bttnghiphep.Click += new System.EventHandler(this.bttnghiphep_Click);
             // 
             // dataGridView4
             // 
@@ -267,7 +268,7 @@
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button bttnghiphep;
         private System.Windows.Forms.DataGridView dataGridView4;
     }
 }
