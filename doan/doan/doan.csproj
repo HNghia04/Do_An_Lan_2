@@ -70,6 +70,18 @@
     <Compile Include="cac form nhan vien\chamcong.Designer.cs">
       <DependentUpon>chamcong.cs</DependentUpon>
     </Compile>
+    <Compile Include="cac form nhan vien\nghiphepnhanvien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cac form nhan vien\nghiphepnhanvien.Designer.cs">
+      <DependentUpon>nghiphepnhanvien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cac form nhan vien\nghiviecnhanvien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cac form nhan vien\nghiviecnhanvien.Designer.cs">
+      <DependentUpon>nghiviecnhanvien.cs</DependentUpon>
+    </Compile>
     <Compile Include="cac form quan ly\bangcap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,6 +208,12 @@
     </Compile>
     <EmbeddedResource Include="cac form nhan vien\chamcong.resx">
       <DependentUpon>chamcong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cac form nhan vien\nghiphepnhanvien.resx">
+      <DependentUpon>nghiphepnhanvien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cac form nhan vien\nghiviecnhanvien.resx">
+      <DependentUpon>nghiviecnhanvien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="cac form quan ly\bangcap.resx">
       <DependentUpon>bangcap.cs</DependentUpon>

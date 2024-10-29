@@ -192,13 +192,14 @@ namespace doan.cac_form_quan_ly
         {
             TinhLuongThucNhan();
         }
+        // Phương thức tính lương thực nhận
         private void TinhLuongThucNhan()
         {
-            // Kiểm tra xem có mục nào được chọn không
-            if (cbxluongcoban.SelectedItem == null || cbxphucap.SelectedItem == null)
+            // Kiểm tra xem có mục lương cơ bản được chọn không
+            if (cbxluongcoban.SelectedItem == null)
             {
                 txtluongthucnhan.Text = "0"; // Hoặc bạn có thể để trống
-                return; // Dừng thực hiện nếu không có mục nào được chọn
+                return;
             }
 
             // Lấy lương cơ bản từ ComboBox lương cơ bản
@@ -206,13 +207,19 @@ namespace doan.cac_form_quan_ly
             string mucLuongCoBanStr = luongCoBanParts[1].TrimEnd(')').Trim(); // Lấy số tiền lương cơ bản
             float mucLuongCoBan = float.Parse(mucLuongCoBanStr);
 
-            // Lấy phụ cấp từ ComboBox phụ cấp
-            string[] phuCapParts = cbxphucap.SelectedItem.ToString().Split('(');
-            string soTienPhuCapStr = phuCapParts[1].TrimEnd(')').Trim(); // Lấy số tiền phụ cấp
-            float soTienPhuCap = float.Parse(soTienPhuCapStr);
+            float luongThucNhan = mucLuongCoBan; // Gán lương thực nhận mặc định bằng lương cơ bản
 
-            // Tính lương thực nhận
-            float luongThucNhan = mucLuongCoBan + soTienPhuCap;
+            // Kiểm tra xem có phụ cấp được chọn không
+            if (cbxphucap.SelectedItem != null)
+            {
+                // Lấy phụ cấp từ ComboBox phụ cấp nếu có
+                string[] phuCapParts = cbxphucap.SelectedItem.ToString().Split('(');
+                string soTienPhuCapStr = phuCapParts[1].TrimEnd(')').Trim(); // Lấy số tiền phụ cấp
+                float soTienPhuCap = float.Parse(soTienPhuCapStr);
+
+                // Cộng thêm phụ cấp vào lương thực nhận
+                luongThucNhan += soTienPhuCap;
+            }
 
             // Định dạng lương thực nhận với dấu phẩy
             string formattedLuongThucNhan = string.Format("{0:N0}", luongThucNhan);
@@ -220,6 +227,18 @@ namespace doan.cac_form_quan_ly
             // Hiển thị lương thực nhận vào TextBox
             txtluongthucnhan.Text = formattedLuongThucNhan;
         }
+
+
+        // Sự kiện TextChanged của txtluongthucnhan (để tính lại khi người dùng thay đổi thủ công)
+        private void txtluongthucnhan_TextChanged(object sender, EventArgs e)
+        {
+            // Kiểm tra nếu người dùng thay đổi thủ công, tính toán lại giá trị
+            if (float.TryParse(txtluongthucnhan.Text, out float customLuongThucNhan))
+            {
+                txtluongthucnhan.Text = customLuongThucNhan.ToString("N2");
+            }
+        }
+
 
         private void bttthem_Click(object sender, EventArgs e)
         {
@@ -350,5 +369,9 @@ namespace doan.cac_form_quan_ly
             }
         }
 
+        private void bttxoa_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

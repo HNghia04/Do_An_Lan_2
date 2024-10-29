@@ -35,7 +35,6 @@
             this.cbxphucap = new System.Windows.Forms.ComboBox();
             this.cbxluongcoban = new System.Windows.Forms.ComboBox();
             this.cbxtennhanvien = new System.Windows.Forms.ComboBox();
-            this.bttxoa = new Guna.UI2.WinForms.Guna2Button();
             this.bttthem = new Guna.UI2.WinForms.Guna2Button();
             this.txtluongthucnhan = new Guna.UI2.WinForms.Guna2TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -85,7 +84,6 @@
             this.groupBox1.Controls.Add(this.cbxphucap);
             this.groupBox1.Controls.Add(this.cbxluongcoban);
             this.groupBox1.Controls.Add(this.cbxtennhanvien);
-            this.groupBox1.Controls.Add(this.bttxoa);
             this.groupBox1.Controls.Add(this.bttthem);
             this.groupBox1.Controls.Add(this.txtluongthucnhan);
             this.groupBox1.Controls.Add(this.label8);
@@ -133,26 +131,6 @@
             this.cbxtennhanvien.TabIndex = 24;
             this.cbxtennhanvien.SelectedIndexChanged += new System.EventHandler(this.cbxtennhanvien_SelectedIndexChanged);
             // 
-            // bttxoa
-            // 
-            this.bttxoa.BackColor = System.Drawing.SystemColors.Control;
-            this.bttxoa.BorderRadius = 18;
-            this.bttxoa.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
-            this.bttxoa.BorderThickness = 1;
-            this.bttxoa.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.bttxoa.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.bttxoa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(221)))));
-            this.bttxoa.DisabledState.Font = new System.Drawing.Font("Century Gothic", 11.14286F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bttxoa.DisabledState.ForeColor = System.Drawing.Color.White;
-            this.bttxoa.FillColor = System.Drawing.Color.White;
-            this.bttxoa.Font = new System.Drawing.Font("Century Gothic", 11.14286F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bttxoa.ForeColor = System.Drawing.Color.Black;
-            this.bttxoa.Location = new System.Drawing.Point(568, 213);
-            this.bttxoa.Name = "bttxoa";
-            this.bttxoa.Size = new System.Drawing.Size(313, 69);
-            this.bttxoa.TabIndex = 23;
-            this.bttxoa.Text = "Xóa ";
-            // 
             // bttthem
             // 
             this.bttthem.BackColor = System.Drawing.SystemColors.Control;
@@ -195,6 +173,7 @@
             this.txtluongthucnhan.SelectedText = "";
             this.txtluongthucnhan.Size = new System.Drawing.Size(442, 56);
             this.txtluongthucnhan.TabIndex = 20;
+            this.txtluongthucnhan.TextChanged += new System.EventHandler(this.txtluongthucnhan_TextChanged);
             // 
             // label8
             // 
@@ -357,7 +336,6 @@
         private System.Windows.Forms.ComboBox cbxphucap;
         private System.Windows.Forms.ComboBox cbxluongcoban;
         private System.Windows.Forms.ComboBox cbxtennhanvien;
-        private Guna.UI2.WinForms.Guna2Button bttxoa;
         private Guna.UI2.WinForms.Guna2Button bttthem;
         private Guna.UI2.WinForms.Guna2TextBox txtluongthucnhan;
         private System.Windows.Forms.Label label8;

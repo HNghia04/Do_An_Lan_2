@@ -1,4 +1,5 @@
 ﻿using doan.cac_form_nhan_vien;
+using doan.cac_form_quan_ly;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,6 +29,20 @@ namespace doan
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             chamcong f = new chamcong();
+            f.Show();
+            this.Hide();
+        }
+
+        private void bttphucap_Click(object sender, EventArgs e)
+        {
+            nghiphepnhanvien f = new nghiphepnhanvien();
+            f.Show();
+            this.Hide();
+        }
+
+        private void guna2Button6_Click(object sender, EventArgs e)
+        {
+            nghiviecnhanvien f = new nghiviecnhanvien();
             f.Show();
             this.Hide();
         }

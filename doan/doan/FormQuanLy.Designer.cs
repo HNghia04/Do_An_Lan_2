@@ -43,6 +43,8 @@
             this.bttthoat = new Guna.UI2.WinForms.Guna2CircleButton();
             this.txttimkiem = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbxtimkiemthang = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
@@ -245,10 +247,10 @@
             // 
             // txttimkiem
             // 
-            this.txttimkiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.85714F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txttimkiem.Font = new System.Drawing.Font("Century Gothic", 11.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txttimkiem.Location = new System.Drawing.Point(1763, 198);
             this.txttimkiem.Name = "txttimkiem";
-            this.txttimkiem.Size = new System.Drawing.Size(332, 49);
+            this.txttimkiem.Size = new System.Drawing.Size(332, 39);
             this.txttimkiem.TabIndex = 1;
             this.txttimkiem.TextChanged += new System.EventHandler(this.txttimkiem_TextChanged);
             // 
@@ -262,12 +264,32 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Bảng chấm công";
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(0, 0);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 32);
+            this.comboBox1.TabIndex = 4;
+            // 
+            // cbxtimkiemthang
+            // 
+            this.cbxtimkiemthang.Font = new System.Drawing.Font("Century Gothic", 11.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxtimkiemthang.FormattingEnabled = true;
+            this.cbxtimkiemthang.Location = new System.Drawing.Point(1535, 197);
+            this.cbxtimkiemthang.Name = "cbxtimkiemthang";
+            this.cbxtimkiemthang.Size = new System.Drawing.Size(188, 40);
+            this.cbxtimkiemthang.TabIndex = 5;
+            this.cbxtimkiemthang.SelectedIndexChanged += new System.EventHandler(this.cbxtimkiemthang_SelectedIndexChanged);
+            // 
             // FormQuanLy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(2128, 1073);
+            this.Controls.Add(this.cbxtimkiemthang);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txttimkiem);
             this.Controls.Add(this.bttthoat);
@@ -298,5 +320,7 @@
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
         private System.Windows.Forms.TextBox txttimkiem;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbxtimkiemthang;
     }
 }

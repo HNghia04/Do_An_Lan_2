@@ -275,15 +275,22 @@ namespace doan.cac_form_quan_ly
         }
 
         private void bttnghiphep_Click(object sender, EventArgs e)
-        {
-            nghiphep f = new nghiphep();
-            f.Show();
-            this.Hide();
-        }
+            {
+                try
+                {
+                    nghiphep1 f = new nghiphep1(); // Khởi tạo form mới
+                    f.Show(); // Hiển thị form mới
+                    this.Hide(); // Ẩn form hiện tại
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Đã xảy ra lỗi khi chuyển form: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
 
         private void btthopdong_Click(object sender, EventArgs e)
         {
-            hopdong f = new hopdong();
+            nghiphep1 f = new nghiphep1();
             f.Show();
             this.Hide();
         }

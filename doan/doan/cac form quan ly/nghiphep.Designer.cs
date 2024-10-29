@@ -1,6 +1,6 @@
 ﻿namespace doan.cac_form_quan_ly
 {
-    partial class nghiphep
+    partial class nghiphep1
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(nghiphep));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(nghiphep1));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.cbxhoten = new System.Windows.Forms.ComboBox();
@@ -298,7 +298,7 @@
             this.txtTimKiem.TabIndex = 32;
             this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged_1);
             // 
-            // nghiphep
+            // nghiphep1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -308,9 +308,9 @@
             this.Controls.Add(this.guna2CircleButton1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
-            this.Name = "nghiphep";
+            this.Name = "nghiphep1";
             this.Text = "nghiphep";
-            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.nghiphep_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);

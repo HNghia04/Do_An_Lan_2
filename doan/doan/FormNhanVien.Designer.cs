@@ -72,6 +72,7 @@
             this.guna2Button6.Size = new System.Drawing.Size(351, 115);
             this.guna2Button6.TabIndex = 5;
             this.guna2Button6.Text = "Đơn thôi việc";
+            this.guna2Button6.Click += new System.EventHandler(this.guna2Button6_Click);
             // 
             // bttbangluong
             // 
@@ -110,6 +111,7 @@
             this.bttphucap.Size = new System.Drawing.Size(351, 115);
             this.bttphucap.TabIndex = 3;
             this.bttphucap.Text = "Nghỉ phép";
+            this.bttphucap.Click += new System.EventHandler(this.bttphucap_Click);
             // 
             // guna2Button1
             // 

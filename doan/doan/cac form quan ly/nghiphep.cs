@@ -6,11 +6,11 @@ using System.Windows.Forms;
 
 namespace doan.cac_form_quan_ly
 {
-    public partial class nghiphep : Form
+    public partial class nghiphep1 : Form
     {
         private string connectionString = "Data Source=LAPTOP-G689TECS\\SQLEXPRESS;Initial Catalog=QuanLy_NhanVien;Integrated Security=True";
 
-        public nghiphep()
+        public nghiphep1()
         {
             InitializeComponent();
         }
