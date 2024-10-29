@@ -92,6 +92,7 @@
             this.bttbangluong.Size = new System.Drawing.Size(351, 115);
             this.bttbangluong.TabIndex = 4;
             this.bttbangluong.Text = "Bảng lương";
+            this.bttbangluong.Click += new System.EventHandler(this.bttbangluong_Click);
             // 
             // bttphucap
             // 

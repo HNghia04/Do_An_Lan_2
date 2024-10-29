@@ -46,5 +46,12 @@ namespace doan
             f.Show();
             this.Hide();
         }
+
+        private void bttbangluong_Click(object sender, EventArgs e)
+        {
+            bangluongnhanvien f = new bangluongnhanvien();
+            f.Show();
+            this.Hide();
+        }
     }
 }
