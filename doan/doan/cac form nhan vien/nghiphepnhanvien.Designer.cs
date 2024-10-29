@@ -70,6 +70,7 @@
             this.cbxhoten1.Name = "cbxhoten1";
             this.cbxhoten1.Size = new System.Drawing.Size(442, 38);
             this.cbxhoten1.TabIndex = 27;
+            this.cbxhoten1.SelectedIndexChanged += new System.EventHandler(this.cbxhoten1_SelectedIndexChanged);
             // 
             // btthem1
             // 

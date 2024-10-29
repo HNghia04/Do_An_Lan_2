@@ -18,6 +18,7 @@ namespace doan.cac_form_quan_ly
             InitializeComponent();
             LoadData();
             LoadComboBox();
+            cbxhoten.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
         private void bangcap_Load(object sender, EventArgs e)

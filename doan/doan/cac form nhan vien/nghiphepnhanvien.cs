@@ -18,6 +18,7 @@ namespace doan.cac_form_nhan_vien
         public nghiphepnhanvien()
         {
             InitializeComponent();
+            cbxhoten1.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
         private void guna2CircleButton1_Click(object sender, EventArgs e)
@@ -122,5 +123,9 @@ namespace doan.cac_form_nhan_vien
             }
         }
 
+        private void cbxhoten1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

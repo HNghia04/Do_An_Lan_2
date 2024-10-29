@@ -19,6 +19,7 @@ namespace doan.cac_form_nhan_vien
         public chamcong()
         {
             InitializeComponent();
+            cbxhoten.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
         private void chamcong_Load(object sender, EventArgs e)
