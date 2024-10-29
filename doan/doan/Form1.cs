@@ -1,4 +1,5 @@
-﻿using System;
+﻿using doan.cac_form_quan_ly;
+using System;
 using System.Data.SqlClient;
 using System.Text;
 using System.Windows.Forms;
@@ -76,6 +77,13 @@ namespace doan
 private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Doimatkhau f = new Doimatkhau();
+            f.Show();
+            this.Hide();
         }
     }
 }

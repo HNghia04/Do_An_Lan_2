@@ -18,6 +18,7 @@ namespace doan.cac_form_nhan_vien
         public bangluongnhanvien()
         {
             InitializeComponent();
+            cbxhoten.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
         private void guna2CircleButton1_Click(object sender, EventArgs e)
@@ -98,10 +99,10 @@ namespace doan.cac_form_nhan_vien
 
                 // Truy vấn dữ liệu
                 string query = @"
-            SELECT bl.Thang_tinh_luong, bl.Ma_bang_luong, bl.Ma_nhan_vien, 
-                   bl.Luong_co_ban, bl.Phu_cap, bl.Luong_thuc_nhan 
-            FROM Bang_luong bl
-            WHERE bl.Ma_nhan_vien = @maNhanVien";
+        SELECT bl.Thang_tinh_luong, bl.Ma_bang_luong, bl.Ma_nhan_vien, 
+               bl.Luong_co_ban, bl.Phu_cap, bl.Luong_thuc_nhan 
+        FROM Bang_luong bl
+        WHERE bl.Ma_nhan_vien = @maNhanVien";
 
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
@@ -121,11 +122,15 @@ namespace doan.cac_form_nhan_vien
                         report.RefreshReport();
                     }
                 }
+
+                // Khóa ComboBox sau khi xem lương
+                cbxhoten.Enabled = false; // Khóa ComboBox
             }
             else
             {
                 MessageBox.Show("Không tìm thấy mã nhân viên tương ứng với tên nhân viên đã chọn.");
             }
         }
+
     }
 }
