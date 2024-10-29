@@ -357,7 +357,7 @@
             this.Controls.Add(this.label1);
             this.Name = "themnhanvien";
             this.Text = "themnhanvien";
-            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.themnhanvien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.guna2GroupBox1.ResumeLayout(false);

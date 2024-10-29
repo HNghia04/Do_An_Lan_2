@@ -134,6 +134,7 @@
             this.Controls.Add(this.cbxhoten);
             this.Name = "bangluongnhanvien";
             this.Text = "bangluongnhanvien";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.bangluongnhanvien_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

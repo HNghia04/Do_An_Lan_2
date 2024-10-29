@@ -320,7 +320,7 @@
             this.Controls.Add(this.bttthoat);
             this.Name = "phucap";
             this.Text = "phucap";
-            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.phucap_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

@@ -296,6 +296,7 @@
             this.Controls.Add(this.guna2CircleButton1);
             this.Name = "nghiviecnhanvien";
             this.Text = "nghiviecnhanvien";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.nghiviecnhanvien_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

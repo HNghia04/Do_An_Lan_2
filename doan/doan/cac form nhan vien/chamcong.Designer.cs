@@ -238,6 +238,7 @@
             this.Controls.Add(this.label1);
             this.Name = "chamcong";
             this.Text = "chamcong";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.chamcong_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
