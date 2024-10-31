@@ -290,7 +290,7 @@ namespace doan.cac_form_quan_ly
 
         private void btthopdong_Click(object sender, EventArgs e)
         {
-            nghiphep1 f = new nghiphep1();
+            hopdong f = new hopdong();
             f.Show();
             this.Hide();
         }

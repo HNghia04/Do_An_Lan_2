@@ -21,6 +21,9 @@ namespace doan.cac_form_quan_ly
             LoadData();
             LoadLuongCoBan();
             LoadPhuCap();
+            cbxluongcoban.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbxphucap.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbxtennhanvien.DropDownStyle = ComboBoxStyle.DropDownList;
         }
         private void LoadData()
         {

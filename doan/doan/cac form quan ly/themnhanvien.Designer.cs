@@ -141,6 +141,7 @@
             // 
             // guna2GroupBox1
             // 
+            this.guna2GroupBox1.BackColor = System.Drawing.SystemColors.Control;
             this.guna2GroupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.guna2GroupBox1.Controls.Add(this.dtpngaybatdau);
             this.guna2GroupBox1.Controls.Add(this.cmbphongban);

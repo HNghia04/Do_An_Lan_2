@@ -80,13 +80,28 @@ namespace doan.cac_form_quan_ly
 
             using (SqlConnection connection = new SqlConnection("Data Source=LAPTOP-G689TECS\\SQLEXPRESS;Initial Catalog=QuanLy_NhanVien;Integrated Security=True"))
             {
+                // Kiểm tra xem tên tài khoản đã tồn tại hay chưa
+                string checkQuery = "SELECT COUNT(*) FROM Tai_khoan WHERE Ten_tai_khoan = @TenTaiKhoan";
+                SqlCommand checkCommand = new SqlCommand(checkQuery, connection);
+                checkCommand.Parameters.AddWithValue("@TenTaiKhoan", tenTaiKhoan);
+
+                connection.Open();
+                int count = (int)checkCommand.ExecuteScalar();
+
+                if (count > 0)
+                {
+                    MessageBox.Show("Tên tài khoản đã tồn tại. Vui lòng chọn tên khác.");
+                    connection.Close();
+                    return;
+                }
+
+                // Nếu tên tài khoản chưa tồn tại, thực hiện thêm mới
                 string query = "INSERT INTO Tai_khoan (Ten_tai_khoan, Mat_khau, Ma_quyen_han) VALUES (@TenTaiKhoan, @MatKhau, @MaQuyenHan)";
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@TenTaiKhoan", tenTaiKhoan);
                 command.Parameters.AddWithValue("@MatKhau", matKhau);
                 command.Parameters.AddWithValue("@MaQuyenHan", maQuyenHan);
 
-                connection.Open();
                 command.ExecuteNonQuery();
                 connection.Close();
 
@@ -94,6 +109,7 @@ namespace doan.cac_form_quan_ly
                 LoadData();
             }
         }
+
         private void guna2CircleButton1_Click(object sender, EventArgs e)
         {
             int maQuyenHan = 1; // Hoặc lấy giá trị từ biến nào đó

@@ -57,6 +57,13 @@ namespace doan
                     MessageBox.Show("Tài khoản hoặc mật khẩu cũ không đúng.");
                     return;
                 }
+
+                // Kiểm tra nếu mật khẩu mới giống với mật khẩu cũ
+                if (matKhauCu == matKhauMoi)
+                {
+                    MessageBox.Show("Mật khẩu mới không được trùng với mật khẩu cũ.");
+                    return;
+                }
             }
 
             // Cập nhật mật khẩu mới
@@ -80,6 +87,5 @@ namespace doan
                 }
             }
         }
-
     }
 }

@@ -51,9 +51,9 @@ namespace doan.cac_form_quan_ly
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
-                string query = @"SELECT pc.Ma_phu_cap, nv.Ho_va_ten AS 'Họ và tên', lp.Ten_loai_phu_cap AS 'Loại phụ cấp', pc.So_tien_phu_cap AS 'Số tiền'
-                         FROM Phu_cap pc
-                         JOIN Nhan_vien nv ON pc.Ma_nhan_vien = nv.Ma_nhan_vien
+                string query = @"SELECT pc.Ma_phu_cap, nv.Ho_va_ten AS 'Họ và tên', lp.Ten_loai_phu_cap AS 'Loại phụ cấp', pc.So_tien_phu_cap AS 'Số tiền' 
+                         FROM Phu_cap pc 
+                         JOIN Nhan_vien nv ON pc.Ma_nhan_vien = nv.Ma_nhan_vien 
                          JOIN Loai_phu_cap lp ON pc.Ma_loai_phu_cap = lp.Ma_loai_phu_cap";
 
                 SqlDataAdapter da = new SqlDataAdapter(query, conn);
@@ -64,15 +64,26 @@ namespace doan.cac_form_quan_ly
                 guna2DataGridView1.DataSource = dt;
 
                 // Tùy chỉnh hiển thị cột
-                guna2DataGridView1.Columns[0].HeaderText = "Mã phụ cấp"; // Đặt tiêu đề cho cột Mã phụ cấp
-                guna2DataGridView1.Columns[1].HeaderText = "Họ và tên"; // Đặt tiêu đề cho cột Họ và tên
-                guna2DataGridView1.Columns[2].HeaderText = "Loại phụ cấp"; // Đặt tiêu đề cho cột Loại phụ cấp
-                guna2DataGridView1.Columns[3].HeaderText = "Số tiền"; // Đặt tiêu đề cho cột Số tiền
+                guna2DataGridView1.Columns[0].HeaderText = "Mã phụ cấp";
+                guna2DataGridView1.Columns[1].HeaderText = "Họ và tên";
+                guna2DataGridView1.Columns[2].HeaderText = "Loại phụ cấp";
+                guna2DataGridView1.Columns[3].HeaderText = "Số tiền";
 
                 // Tùy chọn để tự động điều chỉnh kích thước cột
                 guna2DataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+                // Thiết lập hiển thị các hàng
+                guna2DataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells; // Tự động điều chỉnh kích thước hàng
+                guna2DataGridView1.DefaultCellStyle.WrapMode = DataGridViewTriState.True; // Cho phép hiển thị nhiều dòng trong ô
+
+                // Tùy chỉnh màu nền và độ cao hàng
+                guna2DataGridView1.RowTemplate.Height = 30; // Đặt chiều cao hàng
+                guna2DataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.LightGray; // Màu nền xen kẽ cho các hàng
+                guna2DataGridView1.DefaultCellStyle.SelectionBackColor = Color.LightBlue; // Màu nền khi chọn hàng
+                guna2DataGridView1.DefaultCellStyle.SelectionForeColor = Color.Black; // Màu chữ khi chọn hàng
             }
         }
+
         private void LoadNhanVienData()
         {
             using (SqlConnection conn = new SqlConnection(connectionString))

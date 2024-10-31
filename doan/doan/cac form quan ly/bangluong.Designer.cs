@@ -166,6 +166,7 @@
             this.txtluongthucnhan.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtluongthucnhan.Location = new System.Drawing.Point(12, 756);
             this.txtluongthucnhan.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtluongthucnhan.Modified = true;
             this.txtluongthucnhan.Name = "txtluongthucnhan";
             this.txtluongthucnhan.PasswordChar = '\0';
             this.txtluongthucnhan.PlaceholderText = "Lương tổng";
