@@ -20,6 +20,8 @@ namespace doan.cac_form_quan_ly
             LoadChucVu();
             LoadPhongBan();
             cmbgioitinh.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbchucvu.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbphongban.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
         private void LoadData()
