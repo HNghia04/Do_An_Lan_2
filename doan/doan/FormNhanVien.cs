@@ -53,5 +53,10 @@ namespace doan
             f.Show();
             this.Hide();
         }
+
+        private void FormNhanVien_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

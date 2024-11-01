@@ -99,7 +99,7 @@
             // 
             // bttsua
             // 
-            this.bttsua.BackColor = System.Drawing.SystemColors.Control;
+            this.bttsua.BackColor = System.Drawing.Color.White;
             this.bttsua.BorderRadius = 18;
             this.bttsua.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
             this.bttsua.BorderThickness = 1;
@@ -120,7 +120,7 @@
             // 
             // bttxoa
             // 
-            this.bttxoa.BackColor = System.Drawing.SystemColors.Control;
+            this.bttxoa.BackColor = System.Drawing.Color.White;
             this.bttxoa.BorderRadius = 18;
             this.bttxoa.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
             this.bttxoa.BorderThickness = 1;
