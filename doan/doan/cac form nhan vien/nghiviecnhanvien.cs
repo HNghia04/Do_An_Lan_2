@@ -7,7 +7,7 @@ namespace doan.cac_form_nhan_vien
 {
     public partial class nghiviecnhanvien : Form
     {
-        private string connectionString = "Data Source=LAPTOP-G689TECS\\SQLEXPRESS;Initial Catalog=QuanLy_NhanVien;Integrated Security=True";
+        private string connectionString = "Data Source=LAPTOP-G689TECS\\SQLEXPRESS01;Initial Catalog=QuanLy_NhanVien;Integrated Security=True";
 
         public nghiviecnhanvien()
         {

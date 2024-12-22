@@ -38,6 +38,7 @@
             this.bttdangnhap = new Guna.UI2.WinForms.Guna2Button();
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.btnTogglePassword = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -157,12 +158,26 @@
             this.linkLabel1.Text = "Đổi mật khẩu";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
+            // btnTogglePassword
+            // 
+            this.btnTogglePassword.BackColor = System.Drawing.Color.White;
+            this.btnTogglePassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnTogglePassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTogglePassword.ForeColor = System.Drawing.Color.LightGray;
+            this.btnTogglePassword.Location = new System.Drawing.Point(910, 253);
+            this.btnTogglePassword.Name = "btnTogglePassword";
+            this.btnTogglePassword.Size = new System.Drawing.Size(69, 67);
+            this.btnTogglePassword.TabIndex = 7;
+            this.btnTogglePassword.UseVisualStyleBackColor = false;
+            this.btnTogglePassword.Click += new System.EventHandler(this.btnTogglePassword_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(1054, 516);
+            this.Controls.Add(this.btnTogglePassword);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.bttdangnhap);
             this.Controls.Add(this.txt_password);
@@ -189,6 +204,7 @@
         private Guna.UI2.WinForms.Guna2Button bttdangnhap;
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Button btnTogglePassword;
     }
 }
 

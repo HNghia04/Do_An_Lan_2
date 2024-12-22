@@ -19,7 +19,7 @@ namespace doan.cac_form_quan_ly
 
         private void LoadBangCapData()
         {
-            string connectionString = "Data Source=LAPTOP-G689TECS\\SQLEXPRESS;Initial Catalog=QuanLy_NhanVien;Integrated Security=True";
+            string connectionString = "Data Source=LAPTOP-G689TECS\\SQLEXPRESS01;Initial Catalog=QuanLy_NhanVien;Integrated Security=True";
             string query = @"
                 SELECT 
                     Bang_cap.Ma_bang_cap AS [Mã Bằng Cấp],
@@ -52,7 +52,7 @@ namespace doan.cac_form_quan_ly
 
         private void LoadDonXinThoiViecData()
         {
-            string connectionString = "Data Source=LAPTOP-G689TECS\\SQLEXPRESS;Initial Catalog=QuanLy_NhanVien;Integrated Security=True";
+            string connectionString = "Data Source=LAPTOP-G689TECS\\SQLEXPRESS01;Initial Catalog=QuanLy_NhanVien;Integrated Security=True";
             string query = @"
                 SELECT 
                     Don_xin_thoi_viec.Ma_don_xin_thoi_viec AS [Mã Đơn],
@@ -96,7 +96,7 @@ namespace doan.cac_form_quan_ly
 
         private void LoadHopDongData()
         {
-            string connectionString = "Data Source=LAPTOP-G689TECS\\SQLEXPRESS;Initial Catalog=QuanLy_NhanVien;Integrated Security=True";
+            string connectionString = "Data Source=LAPTOP-G689TECS\\SQLEXPRESS01;Initial Catalog=QuanLy_NhanVien;Integrated Security=True";
             string query = @"
                 SELECT 
                     Hop_dong.Ma_hop_dong AS [Mã Hợp Đồng],
@@ -207,7 +207,7 @@ namespace doan.cac_form_quan_ly
         }
         private void LoadDonNghiPhepData()
         {
-            string connectionString = "Data Source=LAPTOP-G689TECS\\SQLEXPRESS;Initial Catalog=QuanLy_NhanVien;Integrated Security=True";
+            string connectionString = "Data Source=LAPTOP-G689TECS\\SQLEXPRESS01;Initial Catalog=QuanLy_NhanVien;Integrated Security=True";
             string query = @"
         SELECT 
             Nghi_phep.Ma_nghi_phep AS [Mã Nghỉ Phép],

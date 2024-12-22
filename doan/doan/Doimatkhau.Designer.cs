@@ -36,6 +36,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtmatkhaumoi = new Guna.UI2.WinForms.Guna2TextBox();
             this.bttdangnhap = new Guna.UI2.WinForms.Guna2Button();
+            this.btnTogglePassword1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // guna2CircleButton1
@@ -87,6 +88,7 @@
             this.txt_password.SelectedText = "";
             this.txt_password.Size = new System.Drawing.Size(415, 67);
             this.txt_password.TabIndex = 15;
+            this.txt_password.TextChanged += new System.EventHandler(this.txt_password_TextChanged);
             // 
             // txt_account
             // 
@@ -161,11 +163,25 @@
             this.bttdangnhap.Text = "Đổi mật khẩu";
             this.bttdangnhap.Click += new System.EventHandler(this.bttdangnhap_Click);
             // 
+            // btnTogglePassword1
+            // 
+            this.btnTogglePassword1.BackColor = System.Drawing.Color.White;
+            this.btnTogglePassword1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnTogglePassword1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTogglePassword1.ForeColor = System.Drawing.Color.LightGray;
+            this.btnTogglePassword1.Location = new System.Drawing.Point(794, 812);
+            this.btnTogglePassword1.Name = "btnTogglePassword1";
+            this.btnTogglePassword1.Size = new System.Drawing.Size(69, 67);
+            this.btnTogglePassword1.TabIndex = 18;
+            this.btnTogglePassword1.UseVisualStyleBackColor = false;
+            this.btnTogglePassword1.Click += new System.EventHandler(this.btnTogglePassword1_Click);
+            // 
             // Doimatkhau
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1970, 1107);
+            this.Controls.Add(this.btnTogglePassword1);
             this.Controls.Add(this.bttdangnhap);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txtmatkhaumoi);
@@ -176,6 +192,7 @@
             this.Name = "Doimatkhau";
             this.Text = "Doimatkhau";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Doimatkhau_Load);
             this.ResumeLayout(false);
 
         }
@@ -188,5 +205,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private Guna.UI2.WinForms.Guna2TextBox txtmatkhaumoi;
         private Guna.UI2.WinForms.Guna2Button bttdangnhap;
+        private System.Windows.Forms.Button btnTogglePassword1;
     }
 }

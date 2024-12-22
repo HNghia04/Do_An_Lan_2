@@ -32,7 +32,7 @@ namespace doan.cac_form_nhan_vien
 
         private void Loadcbtennhanvien()
         {
-            string connectionString = "Data Source=LAPTOP-G689TECS\\SQLEXPRESS;Initial Catalog=QuanLy_NhanVien;Integrated Security=True";
+            string connectionString = "Data Source=LAPTOP-G689TECS\\SQLEXPRESS01;Initial Catalog=QuanLy_NhanVien;Integrated Security=True";
             string query = "SELECT Ma_nhan_vien, Ho_va_ten FROM Nhan_vien;";
 
             using (SqlConnection conn = new SqlConnection(connectionString))
@@ -82,7 +82,7 @@ namespace doan.cac_form_nhan_vien
                 // Tạo mã chấm công tự động
                 maChamCong = GetNextChamCongId(); // Hàm để lấy mã chấm công tiếp theo
 
-                string connectionString = "Data Source=LAPTOP-G689TECS\\SQLEXPRESS;Initial Catalog=QuanLy_NhanVien;Integrated Security=True";
+                string connectionString = "Data Source=LAPTOP-G689TECS\\SQLEXPRESS01;Initial Catalog=QuanLy_NhanVien;Integrated Security=True";
                 string insertQuery = "INSERT INTO Cham_cong (Ma_cham_cong, Ma_nhan_vien, Ngay_lam_viec, So_gio_lam_viec_trong_ngay) VALUES (@MaChamCong, @MaNhanVien, @NgayGioLam, @SoGioLam);";
 
                 using (SqlConnection conn = new SqlConnection(connectionString))
@@ -118,7 +118,7 @@ namespace doan.cac_form_nhan_vien
         private bool CheckChamCongExists(string maNhanVien, DateTime ngayGioLam)
         {
             bool exists = false;
-            string connectionString = "Data Source=LAPTOP-G689TECS\\SQLEXPRESS;Initial Catalog=QuanLy_NhanVien;Integrated Security=True";
+            string connectionString = "Data Source=LAPTOP-G689TECS\\SQLEXPRESS01;Initial Catalog=QuanLy_NhanVien;Integrated Security=True";
             string query = "SELECT COUNT(*) FROM Cham_cong WHERE Ma_nhan_vien = @MaNhanVien AND CAST(Ngay_lam_viec AS DATE) = @NgayLam;";
 
             using (SqlConnection conn = new SqlConnection(connectionString))
@@ -148,7 +148,7 @@ namespace doan.cac_form_nhan_vien
         private int GetNextChamCongId()
         {
             int nextId = 1; // Mặc định bắt đầu từ 1
-            string connectionString = "Data Source=LAPTOP-G689TECS\\SQLEXPRESS;Initial Catalog=QuanLy_NhanVien;Integrated Security=True";
+            string connectionString = "Data Source=LAPTOP-G689TECS\\SQLEXPRESS01;Initial Catalog=QuanLy_NhanVien;Integrated Security=True";
             string query = "SELECT ISNULL(MAX(Ma_cham_cong), 0) FROM Cham_cong;"; // Sử dụng ISNULL để trả về 0 nếu không có bản ghi
 
             using (SqlConnection conn = new SqlConnection(connectionString))
@@ -174,7 +174,7 @@ namespace doan.cac_form_nhan_vien
         }
         private void LoadDataGridView()
         {
-            string connectionString = "Data Source=LAPTOP-G689TECS\\SQLEXPRESS;Initial Catalog=QuanLy_NhanVien;Integrated Security=True";
+            string connectionString = "Data Source=LAPTOP-G689TECS\\SQLEXPRESS01;Initial Catalog=QuanLy_NhanVien;Integrated Security=True";
             DateTime currentDate = DateTime.Now.Date; // Lấy ngày hiện tại (không bao gồm thời gian)
 
             string query = @"

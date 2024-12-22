@@ -44,7 +44,7 @@ namespace doan
 
         private void LoadData(string tuKhoa = "", int? thang = null)
         {
-            string connectionString = "Data Source=LAPTOP-G689TECS\\SQLEXPRESS;Initial Catalog=QuanLy_NhanVien;Integrated Security=True";
+            string connectionString = "Data Source=LAPTOP-G689TECS\\SQLEXPRESS01;Initial Catalog=QuanLy_NhanVien;Integrated Security=True";
             string query = @"
             SELECT 
                 cc.Ma_cham_cong,

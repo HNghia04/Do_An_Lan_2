@@ -27,7 +27,7 @@ namespace doan.cac_form_quan_ly
         private void LoadData()
         {
             // Khởi tạo kết nối với cơ sở dữ liệu
-            using (SqlConnection connection = new SqlConnection("Data Source=LAPTOP-G689TECS\\SQLEXPRESS;Initial Catalog=QuanLy_NhanVien;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection("Data Source=LAPTOP-G689TECS\\SQLEXPRESS01;Initial Catalog=QuanLy_NhanVien;Integrated Security=True"))
             {
                 // Chuẩn bị truy vấn SQL để lấy dữ liệu
                 string query = @"
@@ -55,7 +55,7 @@ namespace doan.cac_form_quan_ly
         }
         private void LoadPhongBan()
         {
-            using (SqlConnection connection = new SqlConnection("Data Source=LAPTOP-G689TECS\\SQLEXPRESS;Initial Catalog=QuanLy_NhanVien;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection("Data Source=LAPTOP-G689TECS\\SQLEXPRESS01;Initial Catalog=QuanLy_NhanVien;Integrated Security=True"))
             {
                 string query = "SELECT Ma_phong_ban, Ten_phong_ban FROM Phong_ban";
                 SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
@@ -78,7 +78,7 @@ namespace doan.cac_form_quan_ly
 
         private void LoadChucVu()
         {
-            using (SqlConnection connection = new SqlConnection("Data Source=LAPTOP-G689TECS\\SQLEXPRESS;Initial Catalog=QuanLy_NhanVien;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection("Data Source=LAPTOP-G689TECS\\SQLEXPRESS01;Initial Catalog=QuanLy_NhanVien;Integrated Security=True"))
             {
                 string query = "SELECT Ma_chuc_vu, Ten_chuc_vu FROM Chuc_vu";
                 SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
@@ -95,7 +95,7 @@ namespace doan.cac_form_quan_ly
         }
         private void AddNhanVien(string hoVaTen, string gioiTinh, string soDienThoai, int maChucVu, int maPhongBan, DateTime ngayBatDau)
         {
-            using (SqlConnection connection = new SqlConnection("Data Source=LAPTOP-G689TECS\\SQLEXPRESS;Initial Catalog=QuanLy_NhanVien;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection("Data Source=LAPTOP-G689TECS\\SQLEXPRESS01;Initial Catalog=QuanLy_NhanVien;Integrated Security=True"))
             {
                 string query = @"
         INSERT INTO Nhan_vien (Ho_va_ten, Gioi_tinh, So_dien_thoai, Ma_chuc_vu, Ma_phong_ban, Ngay_bat_dau_lam_viec) 
@@ -214,7 +214,7 @@ namespace doan.cac_form_quan_ly
 
         private void UpdateNhanVien(string hoTen, string gioiTinh, string soDienThoai, int maChucVu, int maPhongBan, DateTime ngayBatDau)
         {
-            using (SqlConnection connection = new SqlConnection("Data Source=LAPTOP-G689TECS\\SQLEXPRESS;Initial Catalog=QuanLy_NhanVien;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection("Data Source=LAPTOP-G689TECS\\SQLEXPRESS01;Initial Catalog=QuanLy_NhanVien;Integrated Security=True"))
             {
                 string query = @"
             UPDATE Nhan_vien
@@ -267,7 +267,7 @@ namespace doan.cac_form_quan_ly
 
         private void DeleteNhanVien(string hoTen)
         {
-            using (SqlConnection connection = new SqlConnection("Data Source=LAPTOP-G689TECS\\SQLEXPRESS;Initial Catalog=QuanLy_NhanVien;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection("Data Source=LAPTOP-G689TECS\\SQLEXPRESS01;Initial Catalog=QuanLy_NhanVien;Integrated Security=True"))
             {
                 string query = "DELETE FROM Nhan_vien WHERE Ho_va_ten = @Ho_va_ten";
 

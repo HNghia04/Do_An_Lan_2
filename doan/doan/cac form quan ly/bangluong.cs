@@ -13,7 +13,7 @@ namespace doan.cac_form_quan_ly
 {
     public partial class bangluong : Form
     {
-        private string connectionString = "Data Source=LAPTOP-G689TECS\\SQLEXPRESS;Initial Catalog=QuanLy_NhanVien;Integrated Security=True";
+        private string connectionString = "Data Source=LAPTOP-G689TECS\\SQLEXPRESS01;Initial Catalog=QuanLy_NhanVien;Integrated Security=True";
         public bangluong()
         {
             InitializeComponent();
@@ -60,7 +60,7 @@ namespace doan.cac_form_quan_ly
         private void LoadLuongCoBan()
         {
             // Đường dẫn kết nối đến cơ sở dữ liệu của bạn
-            string connectionString = "Data Source=LAPTOP-G689TECS\\SQLEXPRESS;Initial Catalog=QuanLy_NhanVien;Integrated Security=True";
+            string connectionString = "Data Source=LAPTOP-G689TECS\\SQLEXPRESS01;Initial Catalog=QuanLy_NhanVien;Integrated Security=True";
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 try
@@ -95,7 +95,7 @@ namespace doan.cac_form_quan_ly
         private void LoadPhuCap()
         {
             // Đường dẫn kết nối đến cơ sở dữ liệu của bạn
-            string connectionString = "Data Source=LAPTOP-G689TECS\\SQLEXPRESS;Initial Catalog=QuanLy_NhanVien;Integrated Security=True";
+            string connectionString = "Data Source=LAPTOP-G689TECS\\SQLEXPRESS01;Initial Catalog=QuanLy_NhanVien;Integrated Security=True";
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 try
@@ -143,7 +143,7 @@ namespace doan.cac_form_quan_ly
         private void comboboxtennhanvien()
         {
             // Chuỗi kết nối đến SQL Server
-            string connectionString = "Data Source=LAPTOP-G689TECS\\SQLEXPRESS;Initial Catalog=QuanLy_NhanVien;Integrated Security=True"; // Thay thế với chuỗi kết nối của bạn
+            string connectionString = "Data Source=LAPTOP-G689TECS\\SQLEXPRESS01;Initial Catalog=QuanLy_NhanVien;Integrated Security=True"; // Thay thế với chuỗi kết nối của bạn
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {

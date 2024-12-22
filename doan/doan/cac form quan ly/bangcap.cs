@@ -27,7 +27,7 @@ namespace doan.cac_form_quan_ly
         }
         private void LoadComboBox()
         {
-            string connectionString = "Data Source=LAPTOP-G689TECS\\SQLEXPRESS;Initial Catalog=QuanLy_NhanVien;Integrated Security=True";
+            string connectionString = "Data Source=LAPTOP-G689TECS\\SQLEXPRESS01;Initial Catalog=QuanLy_NhanVien;Integrated Security=True";
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
@@ -83,7 +83,7 @@ namespace doan.cac_form_quan_ly
         private void LoadData()
         {
             // Kết nối đến cơ sở dữ liệu
-            string connectionString = "Data Source=LAPTOP-G689TECS\\SQLEXPRESS;Initial Catalog=QuanLy_NhanVien;Integrated Security=True"; // Thay đổi thành chuỗi kết nối của bạn
+            string connectionString = "Data Source=LAPTOP-G689TECS\\SQLEXPRESS01;Initial Catalog=QuanLy_NhanVien;Integrated Security=True"; // Thay đổi thành chuỗi kết nối của bạn
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 try
@@ -159,7 +159,7 @@ namespace doan.cac_form_quan_ly
 
             // Kiểm tra mã bằng cấp có trùng trong cơ sở dữ liệu không
             string maBangCap = txtmabangcap.Text;
-            string connectionString = "Data Source=LAPTOP-G689TECS\\SQLEXPRESS;Initial Catalog=QuanLy_NhanVien;Integrated Security=True";
+            string connectionString = "Data Source=LAPTOP-G689TECS\\SQLEXPRESS01;Initial Catalog=QuanLy_NhanVien;Integrated Security=True";
 
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
@@ -211,7 +211,7 @@ namespace doan.cac_form_quan_ly
 
         private string GetMaNhanVien(string tenNhanVien)
         {
-            string connectionString = "Data Source=LAPTOP-G689TECS\\SQLEXPRESS;Initial Catalog=QuanLy_NhanVien;Integrated Security=True";
+            string connectionString = "Data Source=LAPTOP-G689TECS\\SQLEXPRESS01;Initial Catalog=QuanLy_NhanVien;Integrated Security=True";
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
@@ -246,7 +246,7 @@ namespace doan.cac_form_quan_ly
                 var confirmResult = MessageBox.Show("Bạn có chắc chắn muốn xóa bằng cấp này không?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (confirmResult == DialogResult.Yes)
                 {
-                    string connectionString = "Data Source=LAPTOP-G689TECS\\SQLEXPRESS;Initial Catalog=QuanLy_NhanVien;Integrated Security=True";
+                    string connectionString = "Data Source=LAPTOP-G689TECS\\SQLEXPRESS01;Initial Catalog=QuanLy_NhanVien;Integrated Security=True";
                     using (SqlConnection conn = new SqlConnection(connectionString))
                     {
                         conn.Open();
@@ -275,7 +275,7 @@ namespace doan.cac_form_quan_ly
             string searchKeyword = txttimkiem.Text;
 
             // Kết nối đến cơ sở dữ liệu
-            string connectionString = "Data Source=LAPTOP-G689TECS\\SQLEXPRESS;Initial Catalog=QuanLy_NhanVien;Integrated Security=True"; // Thay đổi thành chuỗi kết nối của bạn
+            string connectionString = "Data Source=LAPTOP-G689TECS\\SQLEXPRESS01;Initial Catalog=QuanLy_NhanVien;Integrated Security=True"; // Thay đổi thành chuỗi kết nối của bạn
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 try

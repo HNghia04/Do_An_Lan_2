@@ -36,7 +36,7 @@ namespace doan.cac_form_nhan_vien
         }
         private void LoadHoTen()
         {
-            string connectionString = "Data Source=LAPTOP-G689TECS\\SQLEXPRESS;Initial Catalog=QuanLy_NhanVien;Integrated Security=True";
+            string connectionString = "Data Source=LAPTOP-G689TECS\\SQLEXPRESS01;Initial Catalog=QuanLy_NhanVien;Integrated Security=True";
             string query = @"
         SELECT nv.Ho_va_ten 
         FROM Bang_luong bl 
@@ -69,7 +69,7 @@ namespace doan.cac_form_nhan_vien
 
             // Tìm mã nhân viên từ tên nhân viên
             string maNhanVien = string.Empty;
-            string connectionString = "Data Source=LAPTOP-G689TECS\\SQLEXPRESS;Initial Catalog=QuanLy_NhanVien;Integrated Security=True";
+            string connectionString = "Data Source=LAPTOP-G689TECS\\SQLEXPRESS01;Initial Catalog=QuanLy_NhanVien;Integrated Security=True";
 
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
